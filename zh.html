@@ -11,10 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▲</text></svg>">
 </head>
 <body class="zh">
 
+  <a class="skip-link" href="#top">跳到主要内容</a>
   <header class="site-header">
     <a class="wordmark" href="#top">YL<span class="wordmark-dot">.</span></a>
     <nav class="site-nav" aria-label="主导航">
@@ -28,10 +30,11 @@
       <span class="lang-sep" aria-hidden="true">/</span>
       <a href="zh.html" class="active" aria-current="page">中文</a>
     </nav>
+    <button class="theme-toggle" type="button" aria-label="切换深色模式">☾</button>
     <a class="header-cta" href="mailto:0109yizhoulu@gmail.com">发邮件</a>
   </header>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
 
     <!-- ============ HERO ============ -->
     <section class="hero">

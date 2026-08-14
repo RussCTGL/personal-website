@@ -98,6 +98,36 @@ a { color: inherit; }
 }
 .site-nav a:hover { color: var(--ink); border-color: var(--fresh); }
 
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+.lang-switch a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  padding: 0.15rem 0;
+  border-bottom: 2px solid transparent;
+}
+.lang-switch a:hover { color: var(--ink); }
+.lang-switch a.active {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom-color: var(--fresh);
+}
+.lang-switch .lang-sep { color: var(--line); }
+
+/* Chinese page: CJK fallbacks slot in behind the latin faces */
+body.zh {
+  --display: "Archivo", "Noto Sans SC", sans-serif;
+  --body: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+  --mono: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-family: var(--body);
+}
+body.zh .hero-title { letter-spacing: 0; }
+
 .header-cta {
   font-family: var(--mono);
   font-size: 0.8rem;
@@ -678,6 +708,7 @@ a { color: inherit; }
 
 @media (max-width: 760px) {
   .site-nav { display: none; }
+  .lang-switch { margin-left: auto; }
   .project { padding: 1.6rem 1.4rem; }
   .tl-item { grid-template-columns: 1fr; gap: 0.3rem; }
   .pipe-arrow { display: none; }

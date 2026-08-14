@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yizhou (Russell) Lu — Software Engineer</title>
+  <meta name="description" content="Yizhou (Russell) Lu builds AI systems that hold up in production — LLM pipelines, computer vision, and full-stack products shipped with evidence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▲</text></svg>">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top">YL<span class="wordmark-dot">.</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#pipeline">Agent&nbsp;pipeline</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="mailto:0109yizhoulu@gmail.com">Email me</a>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <p class="hero-eyebrow reveal">Yizhou (Russell) Lu · Software Engineer · Los Angeles</p>
+      <h1 class="hero-title">
+        <span class="reveal d1">Signal from noise,</span>
+        <span class="reveal d2">shipped with <em>evidence</em>.</span>
+      </h1>
+      <p class="hero-sub reveal d3">
+        I build AI products end to end — LLM retrieval pipelines, computer-vision scoring,
+        the full stack around them — and I run fleets of AI coding agents under review
+        gates strict enough that every merge carries proof. MS&nbsp;CS at USC, formerly
+        UW–Madison (CS&nbsp;+&nbsp;Math).
+      </p>
+      <div class="hero-links reveal d4">
+        <a href="https://github.com/RussCTGL" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="http://linkedin.com/in/yizhou-lu-7034b0286" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://www.liuzijob.com/" target="_blank" rel="noopener">JobSignal, live ↗</a>
+      </div>
+
+      <div class="ticker reveal d5" aria-label="Selected numbers from recent work">
+        <div class="ticker-item"><span class="ticker-num" data-count="8400">0</span><span class="ticker-plus">+</span><span class="ticker-label">jobs ingested, 96% H1B-confirmed</span></div>
+        <div class="ticker-item"><span class="ticker-num" data-count="254">0</span><span class="ticker-label">unit tests + Playwright E2E</span></div>
+        <div class="ticker-item"><span class="ticker-num" data-count="60">0</span><span class="ticker-plus">+</span><span class="ticker-label">PRs through review gates</span></div>
+        <div class="ticker-item"><span class="ticker-num" data-count="154">0</span><span class="ticker-label">images hand-labeled for calibration</span></div>
+        <div class="ticker-item"><span class="ticker-mono">$1–2</span><span class="ticker-label">LLM cost per user / month</span></div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work">
+      <div class="section-head">
+        <h2>Work that shipped</h2>
+        <p class="section-sub">Two production systems, built and hardened in 2026.</p>
+      </div>
+
+      <!-- JobSignal -->
+      <article class="project project--signal">
+        <div class="project-meta">
+          <span class="chip chip--indigo">Solo project</span>
+          <span class="project-dates">Jul 2026 – present</span>
+        </div>
+        <h3 class="project-title"><a href="https://www.liuzijob.com/" target="_blank" rel="noopener">JobSignal</a></h3>
+        <p class="project-tag">An AI job-search platform for international candidates — live at liuzijob.com.</p>
+        <div class="project-body">
+          <p>
+            A resume goes in; a ranked universe of visa-friendly jobs comes out. Claude
+            extracts the candidate profile, pgvector HNSW search retrieves matches from
+            8,400+ listings, and an LLM reranker writes a per-job rationale — rendered
+            as an interactive 3D galaxy, at about $1–2 per user per month through
+            per-user quotas.
+          </p>
+          <ul class="project-points">
+            <li>Grew the job pool <strong>250×</strong> (34 → 8,400+) with a pluggable ingestion system crawling Greenhouse, Lever, and Ashby boards, seeded from 27,428 real DOL filings and refreshed by daily crons.</li>
+            <li>Diagnosed a production latency breach down to an HNSW index defeated by a filter expression; shipped an exact-filter RPC that restored the plan.</li>
+            <li>Row-level-security multi-tenancy, prompt-injection hardening, and a dead-man's-switch daily health report — silence itself raises an alert.</li>
+            <li>435 commits and 60+ PRs since July, every one through the agent review pipeline below.</li>
+          </ul>
+        </div>
+        <p class="project-stack">Next.js · TypeScript · Supabase Postgres + pgvector · Claude API · Vercel · Playwright</p>
+      </article>
+
+      <!-- FreshLens -->
+      <article class="project project--fresh">
+        <div class="project-meta">
+          <span class="chip chip--green">Internship · TalkMeUp</span>
+          <span class="project-dates">Jun 2026 – present</span>
+        </div>
+        <h3 class="project-title">FreshLens</h3>
+        <p class="project-tag">Computer-vision produce freshness scoring, on an 8-person agile team. The parts below are mine.</p>
+        <div class="project-body">
+          <p>
+            A camera looks at a produce shelf; the system detects each item, scores its
+            freshness 0–100, and generates discount worklists and rescue recipes.
+          </p>
+          <ul class="project-points">
+            <li>Multi-item YOLOv8 detection with produce-class filtering and confidence thresholds — 9 raw boxes down to 4 correctly labeled items, false positives eliminated; fixed a zero-shot label-override bug between classifier and detector.</li>
+            <li>Built the calibration ground truth by hand: 154 labeled images across 9 produce types (real photos and AI fakes), plus the proxy-calibration script and evidence-quality evaluator that scored the model against it.</li>
+            <li>Live detection feed in Next.js/React with dynamically scaled bounding-box overlays, used in stakeholder demos.</li>
+            <li>Designed the project's deterministic closeout gate orchestrator — frozen evidence packets, a v1 result contract, symlink refusal and env allowlisting — through two rounds of peer review.</li>
+          </ul>
+        </div>
+        <p class="project-stack">FastAPI · YOLOv8 · Claude API · Next.js · pytest · GitHub Actions CI</p>
+      </article>
+
+      <!-- Compact row -->
+      <div class="project-row">
+        <article class="mini-project">
+          <h4><a href="https://go-thin.vercel.app/" target="_blank" rel="noopener">GoThin</a></h4>
+          <p>AI fitness coach turning food photos into structured nutrition data. Prompt caching cut input-token cost ~7×; a trace dashboard tracks per-call cost, latency, and cache hits.</p>
+          <p class="mini-stack">Next.js · Supabase · Claude API</p>
+        </article>
+        <article class="mini-project">
+          <h4><a href="https://russctgl.github.io/gold-final-build/" target="_blank" rel="noopener">Lumen Runner</a></h4>
+          <p>Unity 6 runner where light is ammunition — shooting projectiles illuminates the map, and collectibles trade into reload speed and fire rate.</p>
+          <p class="mini-stack">Unity 6 · C#</p>
+        </article>
+        <article class="mini-project">
+          <h4>Twitch Gadget</h4>
+          <p>Content-based stream recommendations from user favorites and game metadata, with Spring Security auth and Caffeine caching.</p>
+          <p class="mini-stack">Spring Boot · React · MySQL · AWS</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PIPELINE ============ -->
+    <section class="section section--pipeline" id="pipeline">
+      <div class="section-head">
+        <h2>How I ship with agents</h2>
+        <p class="section-sub">
+          JobSignal is built by nine role-scoped AI agents I orchestrate — every issue
+          walks this pipeline, and no agent approves its own work. Hover any station.
+        </p>
+      </div>
+
+      <div class="pipeline" role="list">
+        <div class="pipe-node" role="listitem" tabindex="0">
+          <span class="pipe-role">program-manager</span>
+          <span class="pipe-job">Roadmap → issues</span>
+          <div class="pipe-card">Converts the roadmap into milestones, epics, and implementation-ready issues. Never writes code.</div>
+        </div>
+        <div class="pipe-arrow" aria-hidden="true">→</div>
+        <div class="pipe-node" role="listitem" tabindex="0">
+          <span class="pipe-role">product-spec</span>
+          <span class="pipe-job">What, exactly</span>
+          <div class="pipe-card">Translates product outcomes into precise user behavior and acceptance criteria on the issue.</div>
+        </div>
+        <div class="pipe-arrow" aria-hidden="true">→</div>
+        <div class="pipe-node" role="listitem" tabindex="0">
+          <span class="pipe-role">architect</span>
+          <span class="pipe-job">How, exactly</span>
+          <div class="pipe-card">Technical design, schema and interface contracts, ADRs. Multi-round designs end in a single design-of-record document.</div>
+        </div>
+        <div class="pipe-arrow" aria-hidden="true">→</div>
+        <div class="pipe-node" role="listitem" tabindex="0">
+          <span class="pipe-role">implementer</span>
+          <span class="pipe-job">Code + tests + PR</span>
+          <div class="pipe-card">Implements exactly within scope. Never approves, merges, or closes its own work — and never touches the hosted database.</div>
+        </div>
+        <div class="pipe-arrow" aria-hidden="true">→</div>
+        <div class="pipe-node pipe-node--review" role="listitem" tabindex="0">
+          <span class="pipe-role">review panel</span>
+          <span class="pipe-job">code · security · test</span>
+          <div class="pipe-card">Independent line-level review on every code PR; adversarial security review when auth or consent boundaries move; a test engineer who distrusts the implementer's summary. Blocking findings loop back — approval binds to a SHA, three rounds max before escalation.</div>
+        </div>
+        <div class="pipe-arrow" aria-hidden="true">→</div>
+        <div class="pipe-node" role="listitem" tabindex="0">
+          <span class="pipe-role">acceptance</span>
+          <span class="pipe-job">Preview, not promises</span>
+          <div class="pipe-card">Runs the demo script against the deployed preview. "The backend works" is not acceptance.</div>
+        </div>
+        <div class="pipe-arrow" aria-hidden="true">→</div>
+        <div class="pipe-node pipe-node--human" role="listitem" tabindex="0">
+          <span class="pipe-role">release → me</span>
+          <span class="pipe-job">Gates, then merge</span>
+          <div class="pipe-card">The release manager verifies approvals, CI, migration safety, and rollback; the merge itself is always mine. Agents have zero production access — read-only included.</div>
+        </div>
+      </div>
+      <p class="pipe-loop-note" aria-hidden="true">↺ blocking findings return to the implementer · approval is void the moment a new commit lands</p>
+
+      <div class="rules">
+        <h3 class="rules-title">Rules learned the hard way</h3>
+        <div class="rules-grid">
+          <div class="rule"><span class="rule-k">Approvals bind to a SHA.</span> One more push, and the review starts over.</div>
+          <div class="rule"><span class="rule-k">New tests must fail first.</span> A test is only evidence if it failed against the unfixed code — output quoted in the PR.</div>
+          <div class="rule"><span class="rule-k">Three rounds, then escalate.</span> Review loops don't run forever; a human decides what ships with residuals.</div>
+          <div class="rule"><span class="rule-k">Rehearse at production's privilege.</span> A migration that passes as superuser is testing a different system.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="section-head">
+        <h2>Experience</h2>
+      </div>
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-when">Jun 2026 – now</div>
+          <div class="tl-what">
+            <h3>Software Engineer Intern · TalkMeUp</h3>
+            <p>FreshLens computer-vision platform — detection, calibration, evidence evaluation, and the project's closeout gate, shipped under CI, pytest, Ruff, and strict module isolation.</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-when">May – Aug 2025</div>
+          <div class="tl-what">
+            <h3>Software Engineer Intern · Baowin Steel</h3>
+            <p>Full-stack e-commerce trading platform (Django, React, MySQL) — auth, listings, transactions — deployed to AWS EC2/RDS with CI/CD, migrated off on-prem.</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-when">Feb 2024 – Aug 2025</div>
+          <div class="tl-what">
+            <h3>Undergraduate Researcher · UW–Madison CAT Lab</h3>
+            <p>React interfaces for a digital-twin traffic monitoring system; D3.js and Chart.js visualizations of live highway data; lazy loading cut map load time ~2s.</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-when">May – Jul 2024</div>
+          <div class="tl-what">
+            <h3>Software Engineer Intern · Lark Technologies</h3>
+            <p>AI bot automating Google Sheets workflows; multithreading and batch processing turned a 2-week manual analysis of 2,000 customer rows into 4.5 unattended hours.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="edu">
+        <div class="edu-item">
+          <span class="edu-school">University of Southern California</span>
+          <span class="edu-degree">MS, Computer Science · 2025–2027</span>
+        </div>
+        <div class="edu-item">
+          <span class="edu-school">University of Wisconsin–Madison</span>
+          <span class="edu-degree">BS, Computer Sciences + Mathematics · 2022–2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--contact" id="contact">
+      <h2 class="contact-title">Hiring for AI product engineering?</h2>
+      <p class="contact-sub">I'm looking for software engineering roles where LLM systems meet production discipline.</p>
+      <div class="contact-links">
+        <a class="contact-primary" href="mailto:0109yizhoulu@gmail.com">0109yizhoulu@gmail.com</a>
+        <a href="https://github.com/RussCTGL" target="_blank" rel="noopener">github.com/RussCTGL</a>
+        <a href="http://linkedin.com/in/yizhou-lu-7034b0286" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Yizhou Lu · Built by hand, reviewed by agents.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

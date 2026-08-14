@@ -58,16 +58,17 @@
     <section class="section" id="work">
       <div class="section-head">
         <h2>Work that shipped</h2>
-        <p class="section-sub">Two production systems, built and hardened in 2026.</p>
+        <p class="section-sub">Production systems and side projects, built in 2026. Cards with an arrow are live — click through.</p>
       </div>
 
       <!-- JobSignal -->
-      <article class="project project--signal">
+      <article class="project project--signal project--link">
+        <span class="project-visit" aria-hidden="true">visit ↗</span>
         <div class="project-meta">
           <span class="chip chip--indigo">Solo project</span>
           <span class="project-dates">Jul 2026 – present</span>
         </div>
-        <h3 class="project-title"><a href="https://www.liuzijob.com/" target="_blank" rel="noopener">JobSignal</a></h3>
+        <h3 class="project-title"><a class="stretch" href="https://www.liuzijob.com/" target="_blank" rel="noopener">JobSignal</a></h3>
         <p class="project-tag">An AI job-search platform for international candidates — live at liuzijob.com.</p>
         <div class="project-body">
           <p>
@@ -110,18 +111,49 @@
         <p class="project-stack">FastAPI · YOLOv8 · Claude API · Next.js · pytest · GitHub Actions CI</p>
       </article>
 
+      <!-- GoThin -->
+      <article class="project project--gothin project--link">
+        <span class="project-visit" aria-hidden="true">visit ↗</span>
+        <div class="project-meta">
+          <span class="chip chip--teal">Solo project</span>
+          <span class="project-dates">Jun 2026 – present</span>
+        </div>
+        <h3 class="project-title"><a class="stretch" href="https://go-thin.vercel.app/" target="_blank" rel="noopener">GoThin</a></h3>
+        <p class="project-tag">An AI fitness coach that makes logging effortless — live on Vercel.</p>
+        <div class="project-body">
+          <p>
+            Snap a photo of your meal or describe it in a sentence; GoThin turns it into
+            structured nutrition data and tells you when you'll hit your goal.
+          </p>
+          <ul class="project-points">
+            <li>Vision-based macro estimation with confidence scoring and one-tap undo; goal dates projected by linear regression over your actual logs.</li>
+            <li>LLM cost engineering: model routing, prompt caching (~7× cheaper input tokens), and schema-constrained structured outputs.</li>
+            <li>A trace dashboard tracks per-call cost, latency, and cache-hit rate — every API dollar is visible.</li>
+          </ul>
+        </div>
+        <p class="project-stack">Next.js · TypeScript · Supabase Postgres · Claude API · Vercel</p>
+      </article>
+
+      <!-- Lumen Runner -->
+      <article class="project project--lumen project--link">
+        <span class="project-visit" aria-hidden="true">play ↗</span>
+        <div class="project-meta">
+          <span class="chip chip--gold">Game</span>
+          <span class="project-dates">Jan – May 2026</span>
+        </div>
+        <h3 class="project-title"><a class="stretch" href="https://russctgl.github.io/gold-final-build/" target="_blank" rel="noopener">Lumen Runner</a></h3>
+        <p class="project-tag">A Unity 6 runner where light is ammunition — playable in the browser.</p>
+        <div class="project-body">
+          <ul class="project-points">
+            <li>The map starts dark; shooting light projectiles is how you see where you're going, so every shot spends both ammo and safety.</li>
+            <li>Collectibles trade into instant reload and higher fire rate, turning pickup routes into a risk decision.</li>
+          </ul>
+        </div>
+        <p class="project-stack">Unity 6 · C# · WebGL build on GitHub Pages</p>
+      </article>
+
       <!-- Compact row -->
       <div class="project-row">
-        <article class="mini-project">
-          <h4><a href="https://go-thin.vercel.app/" target="_blank" rel="noopener">GoThin</a></h4>
-          <p>AI fitness coach turning food photos into structured nutrition data. Prompt caching cut input-token cost ~7×; a trace dashboard tracks per-call cost, latency, and cache hits.</p>
-          <p class="mini-stack">Next.js · Supabase · Claude API</p>
-        </article>
-        <article class="mini-project">
-          <h4><a href="https://russctgl.github.io/gold-final-build/" target="_blank" rel="noopener">Lumen Runner</a></h4>
-          <p>Unity 6 runner where light is ammunition — shooting projectiles illuminates the map, and collectibles trade into reload speed and fire rate.</p>
-          <p class="mini-stack">Unity 6 · C#</p>
-        </article>
         <article class="mini-project">
           <h4>Twitch Gadget</h4>
           <p>Content-based stream recommendations from user favorites and game metadata, with Spring Security auth and Caffeine caching.</p>

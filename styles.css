@@ -23,6 +23,10 @@
   --orbit: #5A4FBF;
   --orbit-tint: #EAE8F7;
   --amber: #C4740B;
+  --teal: #0E7C86;
+  --teal-tint: #E2F0F1;
+  --gold: #A8820A;
+  --gold-tint: #F5EEDA;
   --line: #D9DED7;
   --display: "Archivo", sans-serif;
   --body: "IBM Plex Sans", sans-serif;
@@ -255,6 +259,36 @@ a { color: inherit; }
 }
 .project--signal::before { background: var(--orbit); }
 .project--fresh::before { background: var(--fresh); }
+.project--gothin::before { background: var(--teal); }
+.project--lumen::before { background: var(--gold); }
+
+/* whole-card click target: the title anchor stretches over the card */
+.project--link .project-title a.stretch::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.project--link {
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+.project--link:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(22, 33, 28, 0.08);
+}
+.project-visit {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.3rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  opacity: 0.55;
+  transition: opacity 0.15s, color 0.15s;
+}
+.project--link:hover .project-visit { opacity: 1; color: var(--ink); }
 
 .project-meta {
   display: flex;
@@ -271,6 +305,8 @@ a { color: inherit; }
 }
 .chip--indigo { background: var(--orbit-tint); color: var(--orbit); }
 .chip--green { background: var(--fresh-tint); color: var(--fresh); }
+.chip--teal { background: var(--teal-tint); color: var(--teal); }
+.chip--gold { background: var(--gold-tint); color: var(--gold); }
 .project-dates {
   font-family: var(--mono);
   font-size: 0.78rem;
@@ -328,6 +364,7 @@ a { color: inherit; }
 .mini-project {
   border-top: 2px solid var(--ink);
   padding-top: 1rem;
+  max-width: 44rem;
 }
 .mini-project h4 {
   font-family: var(--display);

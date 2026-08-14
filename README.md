@@ -2,7 +2,7 @@
 
 Portfolio site for Yizhou (Russell) Lu — static HTML/CSS/JS, no build step.
 
-Live: https://personal-website-woad-nu-51.vercel.app
+Live: https://www.russyizhoulu.site (English) · https://www.russyizhoulu.site/zh.html (中文)
 
 ## Develop
 

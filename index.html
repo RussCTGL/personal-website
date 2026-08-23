@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yizhou (Russell) Lu — Software Engineer</title>
-  <meta name="description" content="Yizhou (Russell) Lu builds AI systems that hold up in production — LLM pipelines, computer vision, and full-stack products shipped with evidence.">
+  <meta name="description" content="Yizhou (Russell) Lu builds AI products that hold up in production — LLM pipelines, computer vision, and the full stack around them, shipped with evidence.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,290 +17,153 @@
 <body>
 
   <a class="skip-link" href="#top">Skip to content</a>
-  <header class="site-header">
-    <a class="wordmark" href="#top">YL<span class="wordmark-dot">.</span></a>
-    <nav class="site-nav" aria-label="Main">
-      <a href="#work">Work</a>
-      <a href="#pipeline">Agent&nbsp;pipeline</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <nav class="lang-switch" aria-label="Language">
-      <a href="index.html" class="active" aria-current="page">EN</a>
-      <span class="lang-sep" aria-hidden="true">/</span>
-      <a href="zh.html" lang="zh-CN">中文</a>
-    </nav>
-    <button class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
-    <a class="header-cta" href="mailto:0109yizhoulu@gmail.com">Email me</a>
-  </header>
 
-  <main id="top" tabindex="-1">
+  <!-- ============ HERO BAND ============ -->
+  <div class="band band--hero">
+    <header class="site-header">
+      <a class="wordmark" href="#top">YL<span class="wordmark-dot">.</span></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <nav class="lang-switch" aria-label="Language">
+        <a href="index.html" class="active" aria-current="page">EN</a>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <a href="zh.html" lang="zh-CN">中文</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
+      <a class="btn btn--primary btn--sm" href="mailto:0109yizhoulu@gmail.com">Email me</a>
+    </header>
 
-    <!-- ============ HERO ============ -->
+    <main id="top" tabindex="-1">
     <section class="hero">
-      <p class="hero-eyebrow reveal">Yizhou (Russell) Lu · Software Engineer · Los Angeles</p>
-      <h1 class="hero-title">
-        <span class="reveal d1">Signal from noise,</span>
-        <span class="reveal d2">shipped with <em>evidence</em>.</span>
-      </h1>
-      <p class="hero-sub reveal d3">
-        I build AI products end to end — LLM retrieval pipelines, computer-vision scoring,
-        the full stack around them — and I run fleets of AI coding agents under review
-        gates strict enough that every merge carries proof. MS&nbsp;CS at USC, formerly
-        UW–Madison (CS&nbsp;+&nbsp;Math).
-      </p>
-      <div class="hero-links reveal d4">
-        <a href="https://github.com/RussCTGL" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="http://linkedin.com/in/yizhou-lu-7034b0286" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="https://www.liuzijob.com/" target="_blank" rel="noopener">JobSignal, live ↗</a>
+      <div class="hero-copy">
+        <p class="kicker kicker--band reveal">Yizhou (Russell) Lu · Software Engineer</p>
+        <h1 class="hero-title reveal d1">AI products that hold up in production.</h1>
+        <p class="hero-sub reveal d2">
+          I build LLM pipelines, computer vision, and the full stack around them —
+          end to end, with the tests and cost discipline to prove they work.
+        </p>
+        <div class="hero-actions reveal d3">
+          <a class="btn btn--primary" href="mailto:0109yizhoulu@gmail.com">Email me</a>
+          <a class="btn btn--ghost" href="https://www.liuzijob.com/" target="_blank" rel="noopener">See JobSignal live ↗</a>
+        </div>
       </div>
 
-      <div class="ticker reveal d5" aria-label="Selected numbers from recent work">
-        <div class="ticker-item"><span class="ticker-num" data-count="8400">0</span><span class="ticker-plus">+</span><span class="ticker-label">jobs ingested, 96% H1B-confirmed</span></div>
-        <div class="ticker-item"><span class="ticker-num" data-count="254">0</span><span class="ticker-label">unit tests + Playwright E2E</span></div>
-        <div class="ticker-item"><span class="ticker-num" data-count="60">0</span><span class="ticker-plus">+</span><span class="ticker-label">PRs through review gates</span></div>
-        <div class="ticker-item"><span class="ticker-num" data-count="154">0</span><span class="ticker-label">images hand-labeled for calibration</span></div>
-        <div class="ticker-item"><span class="ticker-mono">$1–2</span><span class="ticker-label">LLM cost per user / month</span></div>
-      </div>
+      <aside class="galaxy-panel reveal d3" aria-label="JobSignal, live at liuzijob.com">
+        <p class="live-line"><span class="live-dot" aria-hidden="true"></span>liuzijob.com — live now</p>
+        <svg class="galaxy" viewBox="0 0 336 190" aria-hidden="true">
+          <path d="M120 60 L168 95 L215 52" />
+          <path d="M168 95 L250 110" />
+          <path d="M90 128 L168 95 L200 140" />
+          <circle cx="168" cy="95" r="3.5" class="g-a" />
+          <circle cx="120" cy="60" r="2.5" class="g-b" />
+          <circle cx="215" cy="52" r="2" class="g-a f70" />
+          <circle cx="250" cy="110" r="3" class="g-b f80" />
+          <circle cx="90" cy="128" r="2.5" class="g-a f60" />
+          <circle cx="150" cy="150" r="2" class="g-b f50" />
+          <circle cx="270" cy="45" r="1.5" class="g-c f50" />
+          <circle cx="60" cy="70" r="1.5" class="g-c f40" />
+          <circle cx="200" cy="140" r="2.5" class="g-a f80" />
+          <circle cx="290" cy="150" r="1.5" class="g-c f35" />
+          <circle cx="40" cy="150" r="1.5" class="g-c f35" />
+          <circle cx="105" cy="35" r="1.5" class="g-c f40" />
+        </svg>
+        <p class="galaxy-caption">Every dot is a real job; the closest ones match your resume — each with a written rationale.</p>
+      </aside>
     </section>
+    </main>
+  </div>
 
-    <!-- ============ WORK ============ -->
-    <section class="section" id="work">
-      <div class="section-head">
-        <h2>Work that shipped</h2>
-        <p class="section-sub">Production systems and side projects, built in 2026. Cards with an arrow are live — click through.</p>
+  <!-- ============ PROOF STRIP ============ -->
+  <section class="proof" aria-label="Key numbers">
+    <div class="proof-item"><span class="proof-num">8,400+</span><span class="proof-label">listings served by a live product</span></div>
+    <div class="proof-item"><span class="proof-num">254</span><span class="proof-label">tests + Playwright E2E</span></div>
+    <div class="proof-item"><span class="proof-num">60+</span><span class="proof-label">PRs through independent review</span></div>
+    <div class="proof-item"><span class="proof-num">$1–2</span><span class="proof-label">LLM cost per user per month</span></div>
+  </section>
+
+  <!-- ============ FLAGSHIP ============ -->
+  <section class="section flagship" id="work">
+    <div class="flagship-copy">
+      <p class="kicker">Flagship — JobSignal</p>
+      <h2>A live product, not a class project.</h2>
+      <p class="section-body">
+        Resume in, ranked visa-friendly jobs out. Claude extracts the profile,
+        pgvector searches 8,400+ listings sourced from 27,428 real Department of
+        Labor filings, and an LLM reranker writes a rationale for every match.
+      </p>
+      <ul class="dash-list">
+        <li>Serves real users, engineered like production: row-level security, prompt-injection hardening, daily health checks.</li>
+        <li>Cost held to ~$1–2 per user per month through quotas, model routing, and prompt caching.</li>
+      </ul>
+      <a class="text-link" href="https://www.liuzijob.com/" target="_blank" rel="noopener">Try it at liuzijob.com ↗</a>
+    </div>
+
+    <div class="match-card" role="img" aria-label="Sample JobSignal match card with a written rationale">
+      <p class="match-meta">sample match · score 94</p>
+      <p class="match-title">Software Engineer</p>
+      <blockquote class="match-quote">"Strong fit: pgvector + LLM pipeline work maps to your retrieval stack; H-1B sponsorship history confirmed in DOL filings."</blockquote>
+      <div class="chips">
+        <span class="chip">visa-friendly</span>
+        <span class="chip">ranked by rationale</span>
       </div>
+    </div>
+  </section>
 
-      <!-- JobSignal -->
-      <article class="project project--signal project--link">
-        <span class="project-visit" aria-hidden="true">visit ↗</span>
-        <div class="project-meta">
-          <span class="chip chip--indigo">Solo project</span>
-          <span class="project-dates">Jul 2026 – present</span>
-        </div>
-        <h3 class="project-title"><a class="stretch" href="https://www.liuzijob.com/" target="_blank" rel="noopener">JobSignal</a></h3>
-        <p class="project-tag">An AI job-search platform for international candidates — live at liuzijob.com.</p>
-        <div class="project-body">
-          <p>
-            A resume goes in; a ranked universe of visa-friendly jobs comes out. Claude
-            extracts the candidate profile, pgvector HNSW search retrieves matches from
-            8,400+ listings, and an LLM reranker writes a per-job rationale — rendered
-            as an interactive 3D galaxy, at about $1–2 per user per month through
-            per-user quotas.
-          </p>
-          <ul class="project-points">
-            <li>Grew the job pool <strong>250×</strong> (34 → 8,400+) with a pluggable ingestion system crawling Greenhouse, Lever, and Ashby boards, seeded from 27,428 real DOL filings and refreshed by daily crons.</li>
-            <li>Diagnosed a production latency breach down to an HNSW index defeated by a filter expression; shipped an exact-filter RPC that restored the plan.</li>
-            <li>Row-level-security multi-tenancy, prompt-injection hardening, and a dead-man's-switch daily health report — silence itself raises an alert.</li>
-            <li>435 commits and 60+ PRs since July, every one through the agent review pipeline below.</li>
-          </ul>
-        </div>
-        <p class="project-stack">Next.js · TypeScript · Supabase Postgres + pgvector · Claude API · Vercel · Playwright</p>
-      </article>
-
-      <!-- FreshLens -->
-      <article class="project project--fresh">
-        <div class="project-meta">
-          <span class="chip chip--green">Internship · TalkMeUp</span>
-          <span class="project-dates">Jun 2026 – present</span>
-        </div>
-        <h3 class="project-title">FreshLens</h3>
-        <p class="project-tag">Computer-vision produce freshness scoring, on an 8-person agile team. The parts below are mine.</p>
-        <div class="project-body">
-          <p>
-            A camera looks at a produce shelf; the system detects each item, scores its
-            freshness 0–100, and generates discount worklists and rescue recipes.
-          </p>
-          <ul class="project-points">
-            <li>Multi-item YOLOv8 detection with produce-class filtering and confidence thresholds — 9 raw boxes down to 4 correctly labeled items, false positives eliminated; fixed a zero-shot label-override bug between classifier and detector.</li>
-            <li>Built the calibration ground truth by hand: 154 labeled images across 9 produce types (real photos and AI fakes), plus the proxy-calibration script and evidence-quality evaluator that scored the model against it.</li>
-            <li>Live detection feed in Next.js/React with dynamically scaled bounding-box overlays, used in stakeholder demos.</li>
-            <li>Designed the project's deterministic closeout gate orchestrator — frozen evidence packets, a v1 result contract, symlink refusal and env allowlisting — through two rounds of peer review.</li>
-          </ul>
-        </div>
-        <p class="project-stack">FastAPI · YOLOv8 · Claude API · Next.js · pytest · GitHub Actions CI</p>
-      </article>
-
-      <!-- GoThin -->
-      <article class="project project--gothin project--link">
-        <span class="project-visit" aria-hidden="true">visit ↗</span>
-        <div class="project-meta">
-          <span class="chip chip--teal">Solo project</span>
-          <span class="project-dates">Jun 2026 – present</span>
-        </div>
-        <h3 class="project-title"><a class="stretch" href="https://go-thin.vercel.app/" target="_blank" rel="noopener">GoThin</a></h3>
-        <p class="project-tag">An AI fitness coach that makes logging effortless — live on Vercel.</p>
-        <div class="project-body">
-          <p>
-            Snap a photo of your meal or describe it in a sentence; GoThin turns it into
-            structured nutrition data and tells you when you'll hit your goal.
-          </p>
-          <ul class="project-points">
-            <li>Vision-based macro estimation with confidence scoring and one-tap undo; goal dates projected by linear regression over your actual logs.</li>
-            <li>LLM cost engineering: model routing, prompt caching (~7× cheaper input tokens), and schema-constrained structured outputs.</li>
-            <li>A trace dashboard tracks per-call cost, latency, and cache-hit rate — every API dollar is visible.</li>
-          </ul>
-        </div>
-        <p class="project-stack">Next.js · TypeScript · Supabase Postgres · Claude API · Vercel</p>
-      </article>
-
-      <!-- Lumen Runner -->
-      <article class="project project--lumen project--link">
-        <span class="project-visit" aria-hidden="true">play ↗</span>
-        <div class="project-meta">
-          <span class="chip chip--gold">Game</span>
-          <span class="project-dates">Jan – May 2026</span>
-        </div>
-        <h3 class="project-title"><a class="stretch" href="https://russctgl.github.io/gold-final-build/" target="_blank" rel="noopener">Lumen Runner</a></h3>
-        <p class="project-tag">A Unity 6 runner where light is ammunition — playable in the browser.</p>
-        <div class="project-body">
-          <ul class="project-points">
-            <li>The map starts dark; shooting light projectiles is how you see where you're going, so every shot spends both ammo and safety.</li>
-            <li>Collectibles trade into instant reload and higher fire rate, turning pickup routes into a risk decision.</li>
-          </ul>
-        </div>
-        <p class="project-stack">Unity 6 · C# · WebGL build on GitHub Pages</p>
-      </article>
-
-      <!-- Compact row -->
-      <div class="project-row">
-        <article class="mini-project">
-          <h4>Twitch Gadget</h4>
-          <p>Content-based stream recommendations from user favorites and game metadata, with Spring Security auth and Caffeine caching.</p>
-          <p class="mini-stack">Spring Boot · React · MySQL · AWS</p>
+  <!-- ============ MORE SHIPPED ============ -->
+  <section class="shipped">
+    <div class="shipped-inner">
+      <h2>More things I've shipped</h2>
+      <div class="cards">
+        <article class="card">
+          <h3 class="card-title">FreshLens</h3>
+          <p>Computer vision that scores produce freshness — my YOLOv8 detection cut 9 raw boxes to 4 correct labels with zero false positives.</p>
+          <p class="card-note">internship · TalkMeUp</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">GoThin <span class="badge badge--live">LIVE</span></h3>
+          <p>AI fitness coach — meal photo in, structured nutrition and a projected goal date out.</p>
+          <a class="card-link" href="https://go-thin.vercel.app/" target="_blank" rel="noopener">go-thin.vercel.app ↗</a>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Lumen Runner <span class="badge badge--play">PLAY</span></h3>
+          <p>Unity 6 browser game where light is ammunition — every shot spends both ammo and visibility.</p>
+          <a class="card-link" href="https://russctgl.github.io/gold-final-build/" target="_blank" rel="noopener">play in browser ↗</a>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ============ PIPELINE ============ -->
-    <section class="section section--pipeline" id="pipeline">
-      <div class="section-head">
-        <h2>How I ship with agents</h2>
-        <p class="section-sub">
-          JobSignal is built by nine role-scoped AI agents I orchestrate — every issue
-          walks this pipeline, and no agent approves its own work. Hover any station.
-        </p>
+  <!-- ============ DISCIPLINE ============ -->
+  <section class="section discipline">
+    <h2>Why it holds up: nothing merges on trust.</h2>
+    <p class="section-body">
+      JobSignal is built by nine role-scoped AI agents I orchestrate — and none of
+      them can approve its own work. The habits transfer to any team:
+    </p>
+    <div class="rules-grid">
+      <div class="rule"><span class="rule-k">New tests must fail first</span>A test is only evidence if it failed against the unfixed code.</div>
+      <div class="rule"><span class="rule-k">Approvals bind to a SHA</span>One more push, and the review starts over.</div>
+      <div class="rule"><span class="rule-k">Merges are human-only</span>Agents have zero production access — the merge is always mine.</div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="cta-wrap" id="contact">
+    <div class="band band--cta">
+      <h2 class="cta-title">Hiring for AI product engineering?</h2>
+      <p class="cta-sub">MS CS at USC, graduating 2027. Looking for roles where LLM systems meet production discipline.</p>
+      <a class="btn btn--primary btn--lg" href="mailto:0109yizhoulu@gmail.com">0109yizhoulu@gmail.com</a>
+      <div class="cta-links">
+        <a href="https://github.com/RussCTGL" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="http://linkedin.com/in/yizhou-lu-7034b0286" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
-
-      <div class="pipeline" role="list">
-        <div class="pipe-node" role="listitem" tabindex="0">
-          <span class="pipe-role">program-manager</span>
-          <span class="pipe-job">Roadmap → issues</span>
-          <div class="pipe-card">Converts the roadmap into milestones, epics, and implementation-ready issues. Never writes code.</div>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-node" role="listitem" tabindex="0">
-          <span class="pipe-role">product-spec</span>
-          <span class="pipe-job">What, exactly</span>
-          <div class="pipe-card">Translates product outcomes into precise user behavior and acceptance criteria on the issue.</div>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-node" role="listitem" tabindex="0">
-          <span class="pipe-role">architect</span>
-          <span class="pipe-job">How, exactly</span>
-          <div class="pipe-card">Technical design, schema and interface contracts, ADRs. Multi-round designs end in a single design-of-record document.</div>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-node" role="listitem" tabindex="0">
-          <span class="pipe-role">implementer</span>
-          <span class="pipe-job">Code + tests + PR</span>
-          <div class="pipe-card">Implements exactly within scope. Never approves, merges, or closes its own work — and never touches the hosted database.</div>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-node pipe-node--review" role="listitem" tabindex="0">
-          <span class="pipe-role">review panel</span>
-          <span class="pipe-job">code · security · test</span>
-          <div class="pipe-card">Independent line-level review on every code PR; adversarial security review when auth or consent boundaries move; a test engineer who distrusts the implementer's summary. Blocking findings loop back — approval binds to a SHA, three rounds max before escalation.</div>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-node" role="listitem" tabindex="0">
-          <span class="pipe-role">acceptance</span>
-          <span class="pipe-job">Preview, not promises</span>
-          <div class="pipe-card">Runs the demo script against the deployed preview. "The backend works" is not acceptance.</div>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-node pipe-node--human" role="listitem" tabindex="0">
-          <span class="pipe-role">release → me</span>
-          <span class="pipe-job">Gates, then merge</span>
-          <div class="pipe-card">The release manager verifies approvals, CI, migration safety, and rollback; the merge itself is always mine. Agents have zero production access — read-only included.</div>
-        </div>
-      </div>
-      <p class="pipe-loop-note" aria-hidden="true">↺ blocking findings return to the implementer · approval is void the moment a new commit lands</p>
-
-      <div class="rules">
-        <h3 class="rules-title">Rules learned the hard way</h3>
-        <div class="rules-grid">
-          <div class="rule"><span class="rule-k">Approvals bind to a SHA.</span> One more push, and the review starts over.</div>
-          <div class="rule"><span class="rule-k">New tests must fail first.</span> A test is only evidence if it failed against the unfixed code — output quoted in the PR.</div>
-          <div class="rule"><span class="rule-k">Three rounds, then escalate.</span> Review loops don't run forever; a human decides what ships with residuals.</div>
-          <div class="rule"><span class="rule-k">Rehearse at production's privilege.</span> A migration that passes as superuser is testing a different system.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ EXPERIENCE ============ -->
-    <section class="section" id="experience">
-      <div class="section-head">
-        <h2>Experience</h2>
-      </div>
-      <ol class="timeline">
-        <li class="tl-item">
-          <div class="tl-when">Jun 2026 – now</div>
-          <div class="tl-what">
-            <h3>Software Engineer Intern · TalkMeUp</h3>
-            <p>FreshLens computer-vision platform — detection, calibration, evidence evaluation, and the project's closeout gate, shipped under CI, pytest, Ruff, and strict module isolation.</p>
-          </div>
-        </li>
-        <li class="tl-item">
-          <div class="tl-when">May – Aug 2025</div>
-          <div class="tl-what">
-            <h3>Software Engineer Intern · Baowin Steel</h3>
-            <p>Full-stack e-commerce trading platform (Django, React, MySQL) — auth, listings, transactions — deployed to AWS EC2/RDS with CI/CD, migrated off on-prem.</p>
-          </div>
-        </li>
-        <li class="tl-item">
-          <div class="tl-when">Feb 2024 – Aug 2025</div>
-          <div class="tl-what">
-            <h3>Undergraduate Researcher · UW–Madison CAT Lab</h3>
-            <p>React interfaces for a digital-twin traffic monitoring system; D3.js and Chart.js visualizations of live highway data; lazy loading cut map load time ~2s.</p>
-          </div>
-        </li>
-        <li class="tl-item">
-          <div class="tl-when">May – Jul 2024</div>
-          <div class="tl-what">
-            <h3>Software Engineer Intern · Lark Technologies</h3>
-            <p>AI bot automating Google Sheets workflows; multithreading and batch processing turned a 2-week manual analysis of 2,000 customer rows into 4.5 unattended hours.</p>
-          </div>
-        </li>
-      </ol>
-
-      <div class="edu">
-        <div class="edu-item">
-          <span class="edu-school">University of Southern California</span>
-          <span class="edu-degree">MS, Computer Science · 2025–2027</span>
-        </div>
-        <div class="edu-item">
-          <span class="edu-school">University of Wisconsin–Madison</span>
-          <span class="edu-degree">BS, Computer Sciences + Mathematics · 2022–2025</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="section section--contact" id="contact">
-      <h2 class="contact-title">Hiring for AI product engineering?</h2>
-      <p class="contact-sub">I'm looking for software engineering roles where LLM systems meet production discipline.</p>
-      <div class="contact-links">
-        <a class="contact-primary" href="mailto:0109yizhoulu@gmail.com">0109yizhoulu@gmail.com</a>
-        <a href="https://github.com/RussCTGL" target="_blank" rel="noopener">github.com/RussCTGL</a>
-        <a href="http://linkedin.com/in/yizhou-lu-7034b0286" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </section>
-
-  </main>
+    </div>
+  </section>
 
   <footer class="site-footer">
-    <p>© 2026 Yizhou Lu · Built by hand, reviewed by agents.</p>
+    <p>© 2026 Yizhou (Russell) Lu</p>
   </footer>
 
   <script src="main.js"></script>

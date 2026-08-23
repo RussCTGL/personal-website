@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>卢以舟 (Yizhou Lu) — 软件工程师</title>
-  <meta name="description" content="卢以舟 (Yizhou Lu) 构建经得起生产考验的 AI 系统——LLM 管线、计算机视觉与全栈产品,交付必有证据。">
+  <meta name="description" content="卢以舟 (Yizhou Lu) 构建经得起生产考验的 AI 产品——LLM 管线、计算机视觉与完整技术栈,用测试与成本纪律证明可靠。">
   <link rel="alternate" hreflang="en" href="index.html">
   <link rel="alternate" hreflang="zh-CN" href="zh.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,288 +17,152 @@
 <body class="zh">
 
   <a class="skip-link" href="#top">跳到主要内容</a>
-  <header class="site-header">
-    <a class="wordmark" href="#top">YL<span class="wordmark-dot">.</span></a>
-    <nav class="site-nav" aria-label="主导航">
-      <a href="#work">作品</a>
-      <a href="#pipeline">Agent&nbsp;流水线</a>
-      <a href="#experience">经历</a>
-      <a href="#contact">联系</a>
-    </nav>
-    <nav class="lang-switch" aria-label="语言">
-      <a href="index.html" lang="en">EN</a>
-      <span class="lang-sep" aria-hidden="true">/</span>
-      <a href="zh.html" class="active" aria-current="page">中文</a>
-    </nav>
-    <button class="theme-toggle" type="button" aria-label="切换深色模式">☾</button>
-    <a class="header-cta" href="mailto:0109yizhoulu@gmail.com">发邮件</a>
-  </header>
 
-  <main id="top" tabindex="-1">
+  <!-- ============ HERO BAND ============ -->
+  <div class="band band--hero">
+    <header class="site-header">
+      <a class="wordmark" href="#top">YL<span class="wordmark-dot">.</span></a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#work">作品</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <nav class="lang-switch" aria-label="语言">
+        <a href="index.html" lang="en">EN</a>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <a href="zh.html" class="active" aria-current="page">中文</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="切换深色模式">☾</button>
+      <a class="btn btn--primary btn--sm" href="mailto:0109yizhoulu@gmail.com">发邮件</a>
+    </header>
 
-    <!-- ============ HERO ============ -->
+    <main id="top" tabindex="-1">
     <section class="hero">
-      <p class="hero-eyebrow reveal">卢以舟 (Russell Lu) · 软件工程师 · 洛杉矶</p>
-      <h1 class="hero-title">
-        <span class="reveal d1">从噪声里取信号,</span>
-        <span class="reveal d2">交付必有<em>证据</em>。</span>
-      </h1>
-      <p class="hero-sub reveal d3">
-        我端到端地构建 AI 产品——LLM 检索管线、计算机视觉打分,以及围绕它们的完整技术栈;
-        同时指挥一支 AI 编程代理队伍,在严格到每次合并都要带证据的审查门禁下开发。
-        南加州大学计算机硕士在读,本科毕业于威斯康星大学麦迪逊分校(计算机 + 数学双学位)。
-      </p>
-      <div class="hero-links reveal d4">
-        <a href="https://github.com/RussCTGL" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="http://linkedin.com/in/yizhou-lu-7034b0286" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="https://www.liuzijob.com/" target="_blank" rel="noopener">JobSignal 线上 ↗</a>
+      <div class="hero-copy">
+        <p class="kicker kicker--band reveal">卢以舟 (Russell Lu) · 软件工程师</p>
+        <h1 class="hero-title reveal d1">经得起生产考验的 AI 产品。</h1>
+        <p class="hero-sub reveal d2">
+          我端到端地构建 LLM 管线、计算机视觉,以及围绕它们的完整技术栈——
+          并用测试与成本纪律证明它们真的可靠。
+        </p>
+        <div class="hero-actions reveal d3">
+          <a class="btn btn--primary" href="mailto:0109yizhoulu@gmail.com">发邮件</a>
+          <a class="btn btn--ghost" href="https://www.liuzijob.com/" target="_blank" rel="noopener">看看线上的 JobSignal ↗</a>
+        </div>
       </div>
 
-      <div class="ticker reveal d5" aria-label="近期工作的关键数字">
-        <div class="ticker-item"><span class="ticker-num" data-count="8400">0</span><span class="ticker-plus">+</span><span class="ticker-label">已收录职位,96% 确认 H1B sponsor</span></div>
-        <div class="ticker-item"><span class="ticker-num" data-count="254">0</span><span class="ticker-label">单元测试 + Playwright 端到端</span></div>
-        <div class="ticker-item"><span class="ticker-num" data-count="60">0</span><span class="ticker-plus">+</span><span class="ticker-label">通过审查门禁的 PR</span></div>
-        <div class="ticker-item"><span class="ticker-num" data-count="154">0</span><span class="ticker-label">手工标注的校准图片</span></div>
-        <div class="ticker-item"><span class="ticker-mono">$1–2</span><span class="ticker-label">每用户每月 LLM 成本</span></div>
-      </div>
+      <aside class="galaxy-panel reveal d3" aria-label="JobSignal,线上运行于 liuzijob.com">
+        <p class="live-line"><span class="live-dot" aria-hidden="true"></span>liuzijob.com — 线上运行中</p>
+        <svg class="galaxy" viewBox="0 0 336 190" aria-hidden="true">
+          <path d="M120 60 L168 95 L215 52" />
+          <path d="M168 95 L250 110" />
+          <path d="M90 128 L168 95 L200 140" />
+          <circle cx="168" cy="95" r="3.5" class="g-a" />
+          <circle cx="120" cy="60" r="2.5" class="g-b" />
+          <circle cx="215" cy="52" r="2" class="g-a f70" />
+          <circle cx="250" cy="110" r="3" class="g-b f80" />
+          <circle cx="90" cy="128" r="2.5" class="g-a f60" />
+          <circle cx="150" cy="150" r="2" class="g-b f50" />
+          <circle cx="270" cy="45" r="1.5" class="g-c f50" />
+          <circle cx="60" cy="70" r="1.5" class="g-c f40" />
+          <circle cx="200" cy="140" r="2.5" class="g-a f80" />
+          <circle cx="290" cy="150" r="1.5" class="g-c f35" />
+          <circle cx="40" cy="150" r="1.5" class="g-c f35" />
+          <circle cx="105" cy="35" r="1.5" class="g-c f40" />
+        </svg>
+        <p class="galaxy-caption">每个点都是一个真实职位;离你最近的就是你的匹配——每条都附书面理由。</p>
+      </aside>
     </section>
+    </main>
+  </div>
 
-    <!-- ============ WORK ============ -->
-    <section class="section" id="work">
-      <div class="section-head">
-        <h2>已上线的作品</h2>
-        <p class="section-sub">2026 年构建的生产系统与个人项目。带箭头的卡片都在线上——点进去看。</p>
+  <!-- ============ PROOF STRIP ============ -->
+  <section class="proof" aria-label="关键数字">
+    <div class="proof-item"><span class="proof-num">8,400+</span><span class="proof-label">线上产品已收录职位</span></div>
+    <div class="proof-item"><span class="proof-num">254</span><span class="proof-label">单元测试 + Playwright 端到端</span></div>
+    <div class="proof-item"><span class="proof-num">60+</span><span class="proof-label">通过独立审查的 PR</span></div>
+    <div class="proof-item"><span class="proof-num">$1–2</span><span class="proof-label">每用户每月 LLM 成本</span></div>
+  </section>
+
+  <!-- ============ FLAGSHIP ============ -->
+  <section class="section flagship" id="work">
+    <div class="flagship-copy">
+      <p class="kicker">旗舰作品 — JobSignal</p>
+      <h2>上线运行的产品,不是课程作业。</h2>
+      <p class="section-body">
+        简历进,排好序的签证友好职位出。Claude 提取候选人画像,pgvector 在
+        8,400+ 个职位中检索——数据源自 27,428 条真实的美国劳工部备案——再由
+        LLM 重排器为每一条匹配写出书面理由。
+      </p>
+      <ul class="dash-list">
+        <li>服务真实用户,按生产标准打造:行级安全、提示注入防护、每日健康检查。</li>
+        <li>通过配额、模型路由与提示缓存,把成本控制在每用户每月约 $1–2。</li>
+      </ul>
+      <a class="text-link" href="https://www.liuzijob.com/" target="_blank" rel="noopener">去 liuzijob.com 试试 ↗</a>
+    </div>
+
+    <div class="match-card" role="img" aria-label="JobSignal 匹配卡片示例,带书面理由">
+      <p class="match-meta">示例匹配 · 得分 94</p>
+      <p class="match-title">软件工程师</p>
+      <blockquote class="match-quote">"高度匹配:pgvector + LLM 管线经验正对应你们的检索栈;劳工部备案中确认有 H-1B 记录。"</blockquote>
+      <div class="chips">
+        <span class="chip">签证友好</span>
+        <span class="chip">按理由排序</span>
       </div>
+    </div>
+  </section>
 
-      <!-- JobSignal -->
-      <article class="project project--signal project--link">
-        <span class="project-visit" aria-hidden="true">访问 ↗</span>
-        <div class="project-meta">
-          <span class="chip chip--indigo">独立项目</span>
-          <span class="project-dates">2026年7月 – 至今</span>
-        </div>
-        <h3 class="project-title"><a class="stretch" href="https://www.liuzijob.com/" target="_blank" rel="noopener">JobSignal</a></h3>
-        <p class="project-tag">面向国际求职者的 AI 求职平台——线上地址 liuzijob.com。</p>
-        <div class="project-body">
-          <p>
-            上传一份简历,得到一片按匹配度排布的职位星空。Claude 抽取候选人画像,
-            pgvector HNSW 检索从 8,400+ 职位中召回匹配,再由 LLM 重排序并为每个职位
-            写出匹配理由——以交互式 3D 星系呈现,通过按用户配额把 LLM 成本控制在
-            每用户每月约 $1–2。
-          </p>
-          <ul class="project-points">
-            <li>职位池扩大 <strong>250×</strong>(34 → 8,400+):可插拔的多源采集系统爬取 Greenhouse、Lever、Ashby 职位板,以 27,428 条真实 DOL 备案记录为种子,每日定时任务自动刷新。</li>
-            <li>把一次生产延迟超标追查到根因——过滤表达式使 HNSW 索引失效;编写精确过滤的 RPC 恢复了查询计划。</li>
-            <li>行级安全(RLS)多租户隔离、提示词注入防护,以及"死人开关"式每日健康报告——不发送本身就是告警。</li>
-            <li>7 月以来 435 个提交、60+ 个 PR,每一个都走完下方的 agent 审查流水线。</li>
-          </ul>
-        </div>
-        <p class="project-stack">Next.js · TypeScript · Supabase Postgres + pgvector · Claude API · Vercel · Playwright</p>
-      </article>
-
-      <!-- FreshLens -->
-      <article class="project project--fresh">
-        <div class="project-meta">
-          <span class="chip chip--green">实习 · TalkMeUp</span>
-          <span class="project-dates">2026年6月 – 至今</span>
-        </div>
-        <h3 class="project-title">FreshLens</h3>
-        <p class="project-tag">计算机视觉生鲜新鲜度打分,8 人敏捷团队。以下均为我负责的部分。</p>
-        <div class="project-body">
-          <p>
-            摄像头对准生鲜货架,系统检测出每件商品、打出 0–100 的新鲜度分数,
-            并自动生成折扣工单和"抢救食谱"。
-          </p>
-          <ul class="project-points">
-            <li>YOLOv8 多目标检测,引入生鲜类别过滤与置信度阈值——9 个原始检测框精简为 4 个准确标注的物品,误报清零;修复了分类器与检测器之间的零样本标签覆盖 bug。</li>
-            <li>亲手构建校准基准:9 类生鲜共 154 张标注图片(真实照片 + AI 生成假图),外加代理校准脚本和按置信度区间打分的证据质量评估器。</li>
-            <li>Next.js/React 实时检测画面,检测框叠加层动态缩放,用于对外演示。</li>
-            <li>设计项目的确定性收尾门禁编排器——冻结证据包、v1 结果契约、符号链接拒绝与环境变量白名单——经两轮同事评审逐项落实。</li>
-          </ul>
-        </div>
-        <p class="project-stack">FastAPI · YOLOv8 · Claude API · Next.js · pytest · GitHub Actions CI</p>
-      </article>
-
-      <!-- GoThin -->
-      <article class="project project--gothin project--link">
-        <span class="project-visit" aria-hidden="true">访问 ↗</span>
-        <div class="project-meta">
-          <span class="chip chip--teal">独立项目</span>
-          <span class="project-dates">2026年6月 – 至今</span>
-        </div>
-        <h3 class="project-title"><a class="stretch" href="https://go-thin.vercel.app/" target="_blank" rel="noopener">GoThin</a></h3>
-        <p class="project-tag">把记录变得毫不费力的 AI 健身教练——已部署在 Vercel。</p>
-        <div class="project-body">
-          <p>
-            拍一张饭菜的照片,或用一句话描述,GoThin 把它变成结构化的营养数据,
-            并告诉你什么时候能达到目标。
-          </p>
-          <ul class="project-points">
-            <li>基于视觉的宏量营养估算,带置信度打分和一键撤销;达标日期由你的真实记录做线性回归推算。</li>
-            <li>LLM 成本工程:模型路由、提示词缓存(输入 token 约省 7×)、schema 约束的结构化输出。</li>
-            <li>调用追踪面板记录每次调用的成本、延迟与缓存命中率——每一分 API 开销都看得见。</li>
-          </ul>
-        </div>
-        <p class="project-stack">Next.js · TypeScript · Supabase Postgres · Claude API · Vercel</p>
-      </article>
-
-      <!-- Lumen Runner -->
-      <article class="project project--lumen project--link">
-        <span class="project-visit" aria-hidden="true">试玩 ↗</span>
-        <div class="project-meta">
-          <span class="chip chip--gold">游戏</span>
-          <span class="project-dates">2026年1月 – 5月</span>
-        </div>
-        <h3 class="project-title"><a class="stretch" href="https://russctgl.github.io/gold-final-build/" target="_blank" rel="noopener">Lumen Runner</a></h3>
-        <p class="project-tag">光就是弹药的 Unity 6 跑酷游戏——浏览器里直接玩。</p>
-        <div class="project-body">
-          <ul class="project-points">
-            <li>地图一开始是黑的;射出光弹才能照亮前路,所以每一发都同时消耗弹药和安全感。</li>
-            <li>收集品可以换即时装填和更高射速,让拾取路线变成一场风险决策。</li>
-          </ul>
-        </div>
-        <p class="project-stack">Unity 6 · C# · WebGL 构建,托管在 GitHub Pages</p>
-      </article>
-
-      <!-- Compact row -->
-      <div class="project-row">
-        <article class="mini-project">
-          <h4>Twitch Gadget</h4>
-          <p>基于内容的直播推荐:从用户收藏与游戏元数据生成推荐,Spring Security 鉴权,Caffeine 缓存提速。</p>
-          <p class="mini-stack">Spring Boot · React · MySQL · AWS</p>
+  <!-- ============ MORE SHIPPED ============ -->
+  <section class="shipped">
+    <div class="shipped-inner">
+      <h2>其他已上线的作品</h2>
+      <div class="cards">
+        <article class="card">
+          <h3 class="card-title">FreshLens</h3>
+          <p>为生鲜打新鲜度分数的计算机视觉——我负责的 YOLOv8 检测把 9 个原始框收敛为 4 个正确标注,零误报。</p>
+          <p class="card-note">实习 · TalkMeUp</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">GoThin <span class="badge badge--live">线上</span></h3>
+          <p>AI 健身教练——拍张饭菜照片,得到结构化营养数据和按你真实记录推算的目标日期。</p>
+          <a class="card-link" href="https://go-thin.vercel.app/" target="_blank" rel="noopener">go-thin.vercel.app ↗</a>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Lumen Runner <span class="badge badge--play">可玩</span></h3>
+          <p>Unity 6 浏览器游戏,光就是弹药——每一发都同时消耗弹药和视野。</p>
+          <a class="card-link" href="https://russctgl.github.io/gold-final-build/" target="_blank" rel="noopener">在浏览器里玩 ↗</a>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ============ PIPELINE ============ -->
-    <section class="section section--pipeline" id="pipeline">
-      <div class="section-head">
-        <h2>我如何带着 Agent 交付</h2>
-        <p class="section-sub">
-          JobSignal 由我编排的九个职责隔离的 AI agent 构建——每个 issue 都要走完这条流水线,
-          任何 agent 都不能批准自己的工作。悬停查看各站点。
-        </p>
+  <!-- ============ DISCIPLINE ============ -->
+  <section class="section discipline">
+    <h2>为什么可靠:没有靠信任的合并。</h2>
+    <p class="section-body">
+      JobSignal 由我指挥的九个分工明确的 AI 代理构建——没有任何代理能批准自己的工作。这些习惯放到任何团队都成立:
+    </p>
+    <div class="rules-grid">
+      <div class="rule"><span class="rule-k">新测试必须先失败</span>只有在未修复的代码上失败过,测试才算证据。</div>
+      <div class="rule"><span class="rule-k">批准绑定到 SHA</span>再推一次代码,审查就重新开始。</div>
+      <div class="rule"><span class="rule-k">合并只能由人执行</span>代理没有任何生产环境权限——合并永远由我完成。</div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="cta-wrap" id="contact">
+    <div class="band band--cta">
+      <h2 class="cta-title">在招 AI 产品工程师?</h2>
+      <p class="cta-sub">南加州大学计算机硕士在读,2027 年毕业。在找 LLM 系统与生产纪律交汇的工程岗位。</p>
+      <a class="btn btn--primary btn--lg" href="mailto:0109yizhoulu@gmail.com">0109yizhoulu@gmail.com</a>
+      <div class="cta-links">
+        <a href="https://github.com/RussCTGL" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="http://linkedin.com/in/yizhou-lu-7034b0286" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
-
-      <div class="pipeline" role="list">
-        <div class="pipe-node" role="listitem" tabindex="0">
-          <span class="pipe-role">program-manager</span>
-          <span class="pipe-job">路线图 → issue</span>
-          <div class="pipe-card">把路线图拆成 milestone、epic 和可直接实现的 issue。从不写代码。</div>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-node" role="listitem" tabindex="0">
-          <span class="pipe-role">product-spec</span>
-          <span class="pipe-job">精确定义"做什么"</span>
-          <div class="pipe-card">把产品目标翻译成精确的用户行为和验收标准,写进 issue。</div>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-node" role="listitem" tabindex="0">
-          <span class="pipe-role">architect</span>
-          <span class="pipe-job">精确定义"怎么做"</span>
-          <div class="pipe-card">技术方案、schema 与接口契约、ADR。多轮讨论的设计必须收束成一份"设计定稿"文档。</div>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-node" role="listitem" tabindex="0">
-          <span class="pipe-role">implementer</span>
-          <span class="pipe-job">代码 + 测试 + PR</span>
-          <div class="pipe-card">严格按批准范围实现。从不批准、合并或关闭自己的工作——也从不碰托管数据库。</div>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-node pipe-node--review" role="listitem" tabindex="0">
-          <span class="pipe-role">review panel</span>
-          <span class="pipe-job">代码 · 安全 · 测试</span>
-          <div class="pipe-card">每个代码 PR 都要过独立逐行审查;触及认证或同意边界时加做对抗性安全审查;测试工程师从不轻信实现者的自述。阻断性发现退回重做——批准绑定 SHA,三轮封顶后升级决策。</div>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-node" role="listitem" tabindex="0">
-          <span class="pipe-role">acceptance</span>
-          <span class="pipe-job">看 preview,不听承诺</span>
-          <div class="pipe-card">对着部署好的 preview 跑 demo 脚本。"后端能跑"不算验收。</div>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-node pipe-node--human" role="listitem" tabindex="0">
-          <span class="pipe-role">release → 我</span>
-          <span class="pipe-job">核对门禁,然后合并</span>
-          <div class="pipe-card">release manager 核对审批、CI、迁移安全与回滚可用性;合并这一步永远由我来做。Agent 对生产环境零访问——只读也不行。</div>
-        </div>
-      </div>
-      <p class="pipe-loop-note" aria-hidden="true">↺ 阻断性发现退回 implementer · 新提交一落地,批准即失效</p>
-
-      <div class="rules">
-        <h3 class="rules-title">踩过坑才有的规则</h3>
-        <div class="rules-grid">
-          <div class="rule"><span class="rule-k">批准绑定 SHA。</span>再推一次代码,审查从头再来。</div>
-          <div class="rule"><span class="rule-k">新测试必须先失败。</span>只有在未修复的代码上跑出失败、并把输出引进 PR,测试才算证据。</div>
-          <div class="rule"><span class="rule-k">三轮封顶,然后升级。</span>审查循环不会无限跑;要不要带着残留发布,由人来决定。</div>
-          <div class="rule"><span class="rule-k">在生产的权限级别演练。</span>以超级用户身份通过的迁移,测的是另一个系统。</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ EXPERIENCE ============ -->
-    <section class="section" id="experience">
-      <div class="section-head">
-        <h2>经历</h2>
-      </div>
-      <ol class="timeline">
-        <li class="tl-item">
-          <div class="tl-when">2026年6月 – 至今</div>
-          <div class="tl-what">
-            <h3>软件工程实习 · TalkMeUp</h3>
-            <p>FreshLens 计算机视觉平台——检测、校准、证据评估与项目收尾门禁,在 CI、pytest、Ruff 与严格模块隔离下交付。</p>
-          </div>
-        </li>
-        <li class="tl-item">
-          <div class="tl-when">2025年5月 – 8月</div>
-          <div class="tl-what">
-            <h3>软件工程实习 · Baowin Steel</h3>
-            <p>全栈电商交易平台(Django、React、MySQL)——鉴权、商品与交易——部署到 AWS EC2/RDS 并搭建 CI/CD,完成从本地机房的迁移。</p>
-          </div>
-        </li>
-        <li class="tl-item">
-          <div class="tl-when">2024年2月 – 2025年8月</div>
-          <div class="tl-what">
-            <h3>本科科研 · UW–Madison CAT Lab</h3>
-            <p>数字孪生交通监控系统的 React 界面;D3.js 与 Chart.js 呈现实时高速路况;懒加载让地图加载缩短约 2 秒。</p>
-          </div>
-        </li>
-        <li class="tl-item">
-          <div class="tl-when">2024年5月 – 7月</div>
-          <div class="tl-what">
-            <h3>软件工程实习 · 飞书(Lark Technologies)</h3>
-            <p>自动化 Google Sheets 工作流的 AI 机器人;多线程加批处理,把 2,000 行客户分析从约两周人工缩短到 4.5 小时无人值守。</p>
-          </div>
-        </li>
-      </ol>
-
-      <div class="edu">
-        <div class="edu-item">
-          <span class="edu-school">南加州大学(USC)</span>
-          <span class="edu-degree">计算机科学硕士 · 2025–2027</span>
-        </div>
-        <div class="edu-item">
-          <span class="edu-school">威斯康星大学麦迪逊分校</span>
-          <span class="edu-degree">计算机科学 + 数学 双学士 · 2022–2025</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="section section--contact" id="contact">
-      <h2 class="contact-title">在招 AI 产品工程师?</h2>
-      <p class="contact-sub">我在寻找 LLM 系统与生产纪律交汇处的软件工程岗位。</p>
-      <div class="contact-links">
-        <a class="contact-primary" href="mailto:0109yizhoulu@gmail.com">0109yizhoulu@gmail.com</a>
-        <a href="https://github.com/RussCTGL" target="_blank" rel="noopener">github.com/RussCTGL</a>
-        <a href="http://linkedin.com/in/yizhou-lu-7034b0286" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </section>
-
-  </main>
+    </div>
+  </section>
 
   <footer class="site-footer">
-    <p>© 2026 卢以舟 · 亲手构建,由 agent 审查。</p>
+    <p>© 2026 卢以舟 (Yizhou Lu)</p>
   </footer>
 
   <script src="main.js"></script>

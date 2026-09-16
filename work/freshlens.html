@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshLens — internship case study · Yizhou (Russell) Lu</title>
+  <meta name="description" content="Release verification for FreshLens at TalkMeUp: turning release criteria into deterministic, reproducible checks with a shared gate-result contract and evidence a reviewer can inspect.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▲</text></svg>">
+</head>
+<body>
+
+  <a class="skip-link" href="#top">Skip to content</a>
+
+  <div class="band band--hero band--case">
+    <header class="site-header">
+      <a class="wordmark" href="../index.html">YL<span class="wordmark-dot">.</span></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
+      <a class="btn btn--primary btn--sm" href="mailto:0109yizhoulu@gmail.com">Email me</a>
+    </header>
+
+    <main id="top" tabindex="-1">
+      <div class="case-hero">
+        <a class="crumb" href="../index.html#experience">← Experience</a>
+        <p class="kicker kicker--band">Internship case study · FreshLens at TalkMeUp</p>
+        <h1>Turning release criteria into checks that run.</h1>
+        <p class="case-lede">
+          FreshLens is a computer-vision product that scores produce freshness,
+          built by a team at TalkMeUp during my internship. I started on
+          detection and finished owning release verification: turning the
+          team's release criteria into deterministic, reproducible checks with
+          evidence a reviewer can inspect and hand off.
+        </p>
+        <p class="status-row">
+          <span class="tag">Internship · TalkMeUp</span>
+          <span class="tag tag--merged">Gate orchestrator merged</span>
+          <span class="tag tag--pending">Some materials in review</span>
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <article class="case">
+
+    <section class="case-block">
+      <h2>Context and my scope over time</h2>
+      <p>
+        FreshLens is a team product; this page covers only the parts I owned.
+        Early in the internship I worked on YOLOv8 produce detection. On one
+        demo sample, post-processing reduced 9 raw boxes to 4 correct labels
+        with no false positives. That is a single-sample result, not a
+        dataset-level metric, and it is not the main story here.
+      </p>
+      <p>
+        In the final weeks I was the named owner of the release-verification
+        track: the gate orchestrator, the result contract, the evidence it
+        produces, and the review of that evidence.
+      </p>
+    </section>
+
+    <section class="case-block">
+      <h2>The problem</h2>
+      <p>
+        Release readiness lived in prose. Different workflows produced evidence
+        in different shapes, runs were hard to reproduce, and whoever picked up
+        the work next had to reconstruct what "ready" meant. Unclear states
+        tended to get rounded up to "pass".
+      </p>
+    </section>
+
+    <section class="case-block">
+      <h2>Decisions</h2>
+      <ul class="dash-list">
+        <li><strong>A deterministic gate orchestrator.</strong> Each release criterion became a runnable check tied to a command, an exit status, and the artifacts it produced, so the verdict is reproducible rather than remembered.</li>
+        <li><strong>A shared gate-result contract.</strong> Every workflow submits evidence in one format, and the format keeps <em>pass</em>, <em>blocked</em>, and <em>uncertain</em> as distinct outcomes. Uncertain is not collapsed into pass.</li>
+        <li><strong>Reproducibility before new features.</strong> I fixed the issues that stopped runs from reproducing before adding more gates, since evidence that cannot be regenerated is not evidence.</li>
+        <li><strong>Handoff for the unfinished parts.</strong> The parts not done at the end of the internship are documented as such, with what remains, rather than folded into the merged work.</li>
+      </ul>
+    </section>
+
+    <section class="case-block">
+      <h2>How it was verified</h2>
+      <p>
+        Each gate emits its command, exit code, and artifacts, so a reviewer can
+        re-run it and compare. The orchestrator and the contract went through
+        review before merging, and the remaining materials are in a freeze
+        review at the time of writing.
+      </p>
+    </section>
+
+    <section class="case-block">
+      <h2>Status and boundaries</h2>
+      <p class="status-row">
+        <span class="tag tag--merged">Orchestrator and contract merged</span>
+        <span class="tag tag--pending">Some materials in freeze review</span>
+        <span class="tag">Native shopper pipeline not shipped</span>
+      </p>
+      <p>
+        The merged work is the verification tooling and its contract. The
+        native shopper pipeline had not shipped when the internship closed, and
+        nothing on this page should be read as the whole product being in
+        production.
+      </p>
+    </section>
+
+    <section class="case-block">
+      <h2>Where to see the evidence</h2>
+      <p>
+        The team's working materials are internal, so this page presents my
+        scope in summary rather than reproducing them. A sanitized walkthrough
+        of the orchestrator, the contract, and one gate result is available on
+        request.
+      </p>
+    </section>
+
+  </article>
+
+  <nav class="case-foot" aria-label="More cases">
+    <a href="jobsignal.html">JobSignal →</a>
+    <a href="cross-llm-workflow.html">Cross-LLM Development Workflow →</a>
+    <a href="../index.html#work">All work</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>© 2026 Yizhou (Russell) Lu · Statuses reflect evidence as of September 2026.</p>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

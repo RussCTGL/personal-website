@@ -6,7 +6,7 @@ const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").mat
 /* ---------- generic scroll reveal for cards and sections ---------- */
 
 const revealables = document.querySelectorAll(
-  ".proof-item, .flagship-copy, .match-card, .card, .rule"
+  ".proof-item, .flagship-copy, .match-card, .card, .feature, .xp-item, .mini-list li, .rule, .case-block"
 );
 if (!prefersReduced) {
   revealables.forEach((el) => el.classList.add("scroll-reveal"));

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yizhou (Russell) Lu — Software Engineer</title>
-  <meta name="description" content="Yizhou (Russell) Lu builds AI products that hold up in production — LLM pipelines, computer vision, and the full stack around them, shipped with evidence.">
+  <title>Yizhou (Russell) Lu — Software Engineer, AI Applications & Full Stack</title>
+  <meta name="description" content="Yizhou (Russell) Lu builds AI applications with evidence behind their decisions — LLM-powered products, data-quality evaluation, and the full-stack systems around them. MS CS at USC, Class of 2027.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -24,6 +24,8 @@
       <a class="wordmark" href="#top">YL<span class="wordmark-dot">.</span></a>
       <nav class="site-nav" aria-label="Main">
         <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
       <nav class="lang-switch" aria-label="Language">
@@ -38,20 +40,26 @@
     <main id="top" tabindex="-1">
     <section class="hero">
       <div class="hero-copy">
-        <p class="kicker kicker--band reveal">Yizhou (Russell) Lu · Software Engineer</p>
-        <h1 class="hero-title reveal d1">AI products that hold up in production.</h1>
+        <p class="kicker kicker--band reveal">Yizhou (Russell) Lu · Software Engineer — AI Applications &amp; Full Stack</p>
+        <h1 class="hero-title reveal d1">I build AI applications with evidence behind their decisions.</h1>
         <p class="hero-sub reveal d2">
-          I build LLM pipelines, computer vision, and the full stack around them —
-          end to end, with the tests and cost discipline to prove they work.
+          My work spans LLM-powered products, data-quality evaluation, and the
+          full-stack systems around them. I focus on making results explainable,
+          failures recoverable, and releases verifiable.
+        </p>
+        <p class="hero-meta reveal d2">
+          <span>MS in Computer Science, USC · Class of 2027</span>
+          <span>Seeking AI / LLM engineering and full-stack roles</span>
         </p>
         <div class="hero-actions reveal d3">
-          <a class="btn btn--primary" href="mailto:0109yizhoulu@gmail.com">Email me</a>
-          <a class="btn btn--ghost" href="https://www.liuzijob.com/" target="_blank" rel="noopener">See JobSignal live ↗</a>
+          <a class="btn btn--primary" href="#work">View selected work</a>
+          <a class="btn btn--ghost" href="resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+          <a class="btn btn--ghost" href="mailto:0109yizhoulu@gmail.com">Email me</a>
         </div>
       </div>
 
       <aside class="galaxy-panel reveal d3" aria-label="JobSignal, live at liuzijob.com">
-        <p class="live-line"><span class="live-dot" aria-hidden="true"></span>liuzijob.com — live now</p>
+        <p class="live-line"><span class="live-dot" aria-hidden="true"></span>liuzijob.com — live product</p>
         <svg class="galaxy" viewBox="0 0 336 190" aria-hidden="true">
           <path d="M120 60 L168 95 L215 52" />
           <path d="M168 95 L250 110" />
@@ -69,39 +77,55 @@
           <circle cx="40" cy="150" r="1.5" class="g-c f35" />
           <circle cx="105" cy="35" r="1.5" class="g-c f40" />
         </svg>
-        <p class="galaxy-caption">Every dot is a real job; the closest ones match your resume — each with a written rationale.</p>
+        <p class="galaxy-caption">JobSignal: resume in, ranked job matches out, each with a written rationale. Illustration only; see the sample match below.</p>
       </aside>
     </section>
     </main>
   </div>
 
-  <!-- ============ PROOF STRIP ============ -->
-  <section class="proof" aria-label="Key numbers">
-    <div class="proof-item"><span class="proof-num">8,400+</span><span class="proof-label">listings served by a live product</span></div>
-    <div class="proof-item"><span class="proof-num">254</span><span class="proof-label">tests + Playwright E2E</span></div>
-    <div class="proof-item"><span class="proof-num">60+</span><span class="proof-label">PRs through independent review</span></div>
-    <div class="proof-item"><span class="proof-num">$1–2</span><span class="proof-label">LLM cost per user per month</span></div>
-  </section>
+  <!-- ============ ENTRY STRIP ============ -->
+  <nav class="proof" aria-label="Where to start">
+    <a class="proof-item" href="#work">
+      <span class="proof-num">Live product</span>
+      <span class="proof-label">JobSignal — explainable job matching</span>
+    </a>
+    <a class="proof-item" href="#experience">
+      <span class="proof-num">Internship delivery</span>
+      <span class="proof-label">FreshLens release-verification tooling at TalkMeUp</span>
+    </a>
+    <a class="proof-item" href="#more-work">
+      <span class="proof-num">Evaluation case study</span>
+      <span class="proof-label">Deciding whether an LLM check is ready for production</span>
+    </a>
+  </nav>
 
   <!-- ============ FLAGSHIP ============ -->
   <section class="section flagship" id="work">
     <div class="flagship-copy">
       <p class="kicker">Flagship — JobSignal</p>
-      <h2>A live product, not a class project.</h2>
+      <h2>JobSignal — explainable job matching.</h2>
       <p class="section-body">
-        Resume in, ranked visa-friendly jobs out. Claude extracts the profile,
-        pgvector searches 8,400+ listings sourced from 27,428 real Department of
+        Resume in, ranked visa-friendly jobs out. Claude extracts a candidate
+        profile, pgvector retrieves listings sourced from public Department of
         Labor filings, and an LLM reranker writes a rationale for every match.
       </p>
       <ul class="dash-list">
-        <li>Serves real users, engineered like production: row-level security, prompt-injection hardening, daily health checks.</li>
-        <li>Cost held to ~$1–2 per user per month through quotas, model routing, and prompt caching.</li>
+        <li>Built like production: row-level security, prompt-injection hardening, daily health checks, per-user quotas, and model routing with prompt caching.</li>
+        <li>Recent work: recovering interrupted ingestion with a shared lease across write paths, bounded batches, and regression plus mutation tests that show the guard actually holds.</li>
       </ul>
-      <a class="text-link" href="https://www.liuzijob.com/" target="_blank" rel="noopener">Try it at liuzijob.com ↗</a>
+      <p class="status-row">
+        <span class="tag tag--live">Live</span>
+        <span class="tag">Ingestion repair merged · CI passing</span>
+        <span class="tag tag--pending">Production acceptance pending</span>
+      </p>
+      <p class="link-row">
+        <a class="text-link" href="work/jobsignal.html">Engineering case study →</a>
+        <a class="text-link" href="https://www.liuzijob.com/" target="_blank" rel="noopener">Live product ↗</a>
+      </p>
     </div>
 
-    <div class="match-card" role="img" aria-label="Sample JobSignal match card with a written rationale">
-      <p class="match-meta">sample match · score 94</p>
+    <div class="match-card" role="img" aria-label="Sample JobSignal match card with a written rationale, using illustrative data">
+      <p class="match-meta">sample match · illustrative data · score 94</p>
       <p class="match-title">Software Engineer</p>
       <blockquote class="match-quote">"Strong fit: pgvector + LLM pipeline work maps to your retrieval stack; H-1B sponsorship history confirmed in DOL filings."</blockquote>
       <div class="chips">
@@ -111,51 +135,186 @@
     </div>
   </section>
 
-  <!-- ============ MORE SHIPPED ============ -->
-  <section class="shipped">
+  <!-- ============ SELECTED CASES ============ -->
+  <section class="shipped" id="selected">
     <div class="shipped-inner">
-      <h2>More things I've shipped</h2>
-      <div class="cards">
-        <article class="card">
-          <h3 class="card-title">FreshLens</h3>
-          <p>Computer vision that scores produce freshness — my YOLOv8 detection cut 9 raw boxes to 4 correct labels with zero false positives.</p>
-          <p class="card-note">internship · TalkMeUp</p>
+      <div class="section-head">
+        <h2>Selected cases</h2>
+        <p class="section-body">Two more pieces of work with a written case each: a development tool I built and use, and my internship engineering.</p>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <p class="kicker">Developer tooling</p>
+          <h3 class="feature-title">Cross-LLM Development Workflow</h3>
+          <p class="feature-sub">Task routing, independent review, and verifiable delivery</p>
+          <p class="feature-body">Built a reusable local CLI for routing development tasks across LLM providers, with isolated workspaces and traceable run evidence. Used it within a coordinated workflow for a JobSignal repair pilot and the LLM Interview Lab delivery, keeping execution success separate from acceptance.</p>
+          <p class="status-row">
+            <span class="tag tag--preview">Local CLI preview</span>
+            <span class="tag">Cross-model routing</span>
+            <span class="tag">Independent review</span>
+          </p>
+          <p class="link-row">
+            <a class="text-link" href="work/cross-llm-workflow.html">Case study →</a>
+            <a class="text-link" href="https://github.com/RussCTGL/agent-harness-pack" target="_blank" rel="noopener">Related templates ↗</a>
+          </p>
         </article>
-        <article class="card">
-          <h3 class="card-title">GoThin <span class="badge badge--live">LIVE</span></h3>
-          <p>AI fitness coach — meal photo in, structured nutrition and a projected goal date out.</p>
-          <a class="card-link" href="https://go-thin.vercel.app/" target="_blank" rel="noopener">go-thin.vercel.app ↗</a>
-        </article>
-        <article class="card">
-          <h3 class="card-title">Lumen Runner <span class="badge badge--play">PLAY</span></h3>
-          <p>Unity 6 browser game where light is ammunition — every shot spends both ammo and visibility.</p>
-          <a class="card-link" href="https://russctgl.github.io/gold-final-build/" target="_blank" rel="noopener">play in browser ↗</a>
+        <article class="feature">
+          <p class="kicker">Internship engineering</p>
+          <h3 class="feature-title">FreshLens</h3>
+          <p class="feature-sub">Release verification for a computer-vision product</p>
+          <p class="feature-body">Contributed release-verification tooling to FreshLens during my TalkMeUp internship, including deterministic gate orchestration, shared result contracts, and reproducible evidence for review and handoff. Earlier in the internship I worked on YOLOv8 produce detection.</p>
+          <p class="status-row">
+            <span class="tag tag--merged">Orchestrator merged</span>
+            <span class="tag tag--pending">Some materials in review</span>
+          </p>
+          <p class="link-row">
+            <a class="text-link" href="work/freshlens.html">Case study →</a>
+            <a class="text-link" href="#experience">Experience →</a>
+          </p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ DISCIPLINE ============ -->
+  <!-- ============ MORE ENGINEERING WORK ============ -->
+  <section class="section" id="more-work">
+    <div class="section-head">
+      <h2>More engineering work</h2>
+      <p class="section-body">An evaluation case, a full-stack SaaS, and the public half of my delivery process.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <h3 class="card-title">Product-price identity evaluation</h3>
+        <p>A conservative LLM check that vetoes a price match when the product identity does not line up: wrong model, accessory, bundle, or another item that should not be mixed in. Deterministic rules handle the clear-cut conditions; the model only reviews semantics and never generates a price. Measured false rejections, missed mismatches, repeatability, latency, and cost separately, before any production integration.</p>
+        <p class="status-row"><span class="tag tag--offline">Offline evaluation</span><span class="tag">Not in production</span></p>
+        <p class="card-note">team system · my scope: the veto layer and its evaluation</p>
+      </article>
+      <article class="card">
+        <h3 class="card-title">AI Work Observer</h3>
+        <p>Evidence-backed delivery tracking. Links GitHub events to work-item state so progress is grounded in what actually happened: deterministic rules draw the conclusions, AI explains them. Full-stack SaaS built around OAuth, webhooks, native work items, and background processing. A preview is deployed, but the product is not fully functional yet; the source shows the current state.</p>
+        <p class="status-row"><span class="tag tag--progress">In progress</span><span class="tag tag--pending">Preview deployed · not fully functional</span></p>
+        <p class="link-row">
+          <a class="card-link" href="https://ai-work-observer.vercel.app/" target="_blank" rel="noopener">Preview ↗</a>
+          <a class="card-link" href="https://github.com/RussCTGL/ai-work-observer" target="_blank" rel="noopener">Source ↗</a>
+        </p>
+      </article>
+      <article class="card">
+        <h3 class="card-title">agent-harness-pack</h3>
+        <p>Role templates for implementation and independent review, delivery rules, CI templates, and lessons learned from running AI-assisted delivery. The public, reusable templates behind the workflow above; the CLI itself is a separate private preview.</p>
+        <p class="status-row"><span class="tag">Public repository</span></p>
+        <a class="card-link" href="https://github.com/RussCTGL/agent-harness-pack" target="_blank" rel="noopener">github.com/RussCTGL/agent-harness-pack ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ LEARNING & WRITING ============ -->
+  <section class="shipped" id="learning">
+    <div class="shipped-inner">
+      <div class="section-head">
+        <h2>Learning &amp; writing</h2>
+        <p class="section-body">Where I turn what I'm studying into tools I can maintain.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3 class="card-title">LLM Interview Lab <span class="badge badge--live">LIVE</span></h3>
+          <p>A self-directed AI fundamentals learning app with 150 practice questions, 98 knowledge notes across 16 modules, strict multi-select grading, and in-browser progress recovery. Built with content validation and independent review before release. Content ships with the site; it does not call an LLM at runtime.</p>
+          <a class="card-link" href="https://llm-interview-lab.vercel.app/" target="_blank" rel="noopener">llm-interview-lab.vercel.app ↗</a>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Applied NLP Notes <span class="badge badge--live">LIVE</span></h3>
+          <p>Bilingual notes for USC CS544 (Applied NLP), organized by topic and linking concepts, worked examples, formulas, and sources. Follows the course lectures and credits them; not an original curriculum.</p>
+          <p class="link-row">
+            <a class="card-link" href="https://cs544-notes-site.vercel.app/" target="_blank" rel="noopener">English ↗</a>
+            <a class="card-link" href="https://cs544-notes-site.vercel.app/zh/" target="_blank" rel="noopener">中文 ↗</a>
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">CatalogMatch</h3>
+          <p>Team course project on product catalog matching: problem framing, abstention with human review, and experiment design. No trained results yet; baseline and error analysis to follow.</p>
+          <p class="status-row"><span class="tag tag--progress">In progress</span><span class="tag">Team project</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MORE WORK ============ -->
+  <section class="section section--tight" id="more">
+    <h2 class="h2--small">More work</h2>
+    <ul class="mini-list">
+      <li>
+        <span class="mini-title">GoThin <span class="badge badge--live">LIVE</span></span>
+        <span class="mini-body">AI fitness coach: meal photo in, structured nutrition and a projected goal date out.</span>
+        <a class="card-link" href="https://go-thin.vercel.app/" target="_blank" rel="noopener">go-thin.vercel.app ↗</a>
+      </li>
+      <li>
+        <span class="mini-title">Lumen Runner <span class="badge badge--play">PLAY</span></span>
+        <span class="mini-body">Unity 6 browser game where light is ammunition: every shot spends both ammo and visibility.</span>
+        <a class="card-link" href="https://russctgl.github.io/gold-final-build/" target="_blank" rel="noopener">play in browser ↗</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section experience" id="experience">
+    <div class="section-head">
+      <h2>Experience</h2>
+      <p class="section-body">The short version. The full version is on my <a class="inline-link" href="resume.pdf" target="_blank" rel="noopener">resume</a>.</p>
+    </div>
+    <dl class="xp">
+      <div class="xp-item">
+        <dt>
+          <span class="xp-org">TalkMeUp</span>
+          <span class="xp-role">Internship · FreshLens</span>
+        </dt>
+        <dd>
+          <p>FreshLens scores produce freshness with computer vision. I started on YOLOv8 detection and finished owning release verification for the team.</p>
+          <ul class="dash-list">
+            <li>Turned release criteria from prose into runnable checks tied to commands, exit status, and artifacts.</li>
+            <li>Defined a shared gate-result contract so different workflows could submit evidence while keeping pass, blocked, and uncertain states distinct.</li>
+            <li>Fixed problems that broke reproducible runs and documented handoff for the parts still unfinished.</li>
+          </ul>
+          <p class="status-row"><span class="tag tag--merged">Gate orchestrator merged</span><span class="tag tag--pending">Some materials in review</span></p>
+          <a class="text-link" href="work/freshlens.html">Case study →</a>
+        </dd>
+      </div>
+      <div class="xp-item">
+        <dt>
+          <span class="xp-org">University of Southern California</span>
+          <span class="xp-role">MS in Computer Science · Class of 2027</span>
+        </dt>
+        <dd>
+          <p>Coursework includes Applied Natural Language Processing (CS544). Independent projects above.</p>
+        </dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ============ VALIDATION ============ -->
   <section class="section discipline">
-    <h2>Why it holds up: nothing merges on trust.</h2>
+    <h2>How I validate AI-assisted delivery.</h2>
     <p class="section-body">
-      JobSignal is built by nine role-scoped AI agents I orchestrate — and none of
-      them can approve its own work. The habits transfer to any team:
+      Much of my recent work is built with AI coding tools across several models,
+      so my job is defining the requirement, reviewing the evidence, and deciding
+      what ships. One recent run exited successfully, but its run evidence did not
+      cover the acceptance criteria. It went to <em>awaiting verification</em>
+      instead of <em>done</em>, and was reworked. A successful exit is not acceptance.
     </p>
     <div class="rules-grid">
-      <div class="rule"><span class="rule-k">New tests must fail first</span>A test is only evidence if it failed against the unfixed code.</div>
-      <div class="rule"><span class="rule-k">Approvals bind to a SHA</span>One more push, and the review starts over.</div>
-      <div class="rule"><span class="rule-k">Merges are human-only</span>Agents have zero production access — the merge is always mine.</div>
+      <div class="rule"><span class="rule-k">New tests must fail first</span>A test is only evidence if it failed against the unfixed code. Where it matters, a mutation check confirms the guard is what makes it pass.</div>
+      <div class="rule"><span class="rule-k">Approvals bind to a commit</span>Inputs, commits, and run evidence are saved with every task. One more push, and the review starts over.</div>
+      <div class="rule"><span class="rule-k">Execution success ≠ acceptance</span>Quality approval is never granted automatically. Tools have no production access; the merge and the release call are mine.</div>
     </div>
+    <a class="text-link" href="work/cross-llm-workflow.html">How the workflow is built →</a>
   </section>
 
   <!-- ============ CLOSING CTA ============ -->
   <section class="cta-wrap" id="contact">
     <div class="band band--cta">
-      <h2 class="cta-title">Hiring for AI product engineering?</h2>
-      <p class="cta-sub">MS CS at USC, graduating 2027. Looking for roles where LLM systems meet production discipline.</p>
+      <h2 class="cta-title">Hiring for AI application engineering?</h2>
+      <p class="cta-sub">MS CS at USC, Class of 2027. Seeking AI / LLM engineering and full-stack roles where model output has to be explainable and releases have to be verifiable.</p>
       <a class="btn btn--primary btn--lg" href="mailto:0109yizhoulu@gmail.com">0109yizhoulu@gmail.com</a>
       <div class="cta-links">
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
         <a href="https://github.com/RussCTGL" target="_blank" rel="noopener">GitHub ↗</a>
         <a href="http://linkedin.com/in/yizhou-lu-7034b0286" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
@@ -163,7 +322,7 @@
   </section>
 
   <footer class="site-footer">
-    <p>© 2026 Yizhou (Russell) Lu</p>
+    <p>© 2026 Yizhou (Russell) Lu · Project statuses reflect evidence as of September 2026.</p>
   </footer>
 
   <script src="main.js"></script>

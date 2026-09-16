@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cross-LLM Development Workflow — case study · Yizhou (Russell) Lu</title>
+  <meta name="description" content="A reusable local CLI and coordinated process for routing development tasks across LLM providers, running them in isolated workspaces, and keeping execution success separate from acceptance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▲</text></svg>">
+</head>
+<body>
+
+  <a class="skip-link" href="#top">Skip to content</a>
+
+  <div class="band band--hero band--case">
+    <header class="site-header">
+      <a class="wordmark" href="../index.html">YL<span class="wordmark-dot">.</span></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
+      <a class="btn btn--primary btn--sm" href="mailto:0109yizhoulu@gmail.com">Email me</a>
+    </header>
+
+    <main id="top" tabindex="-1">
+      <div class="case-hero">
+        <a class="crumb" href="../index.html#selected">← All work</a>
+        <p class="kicker kicker--band">Developer tooling · Cross-LLM Development Workflow</p>
+        <h1>Task routing, independent review, and verifiable delivery.</h1>
+        <p class="case-lede">
+          A reusable local CLI and a coordinated process for splitting
+          development work across LLM providers, running each task in an
+          isolated workspace with saved run evidence, and keeping "the model
+          exited successfully" separate from "the task is accepted".
+        </p>
+        <p class="status-row">
+          <span class="tag tag--preview">Local CLI preview</span>
+          <span class="tag">Applied in project workflows</span>
+          <span class="tag">Private source</span>
+        </p>
+        <p class="link-row">
+          <a class="text-link" href="https://github.com/RussCTGL/agent-harness-pack" target="_blank" rel="noopener">Related public templates ↗</a>
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <article class="case">
+
+    <section class="case-block">
+      <h2>Why build it</h2>
+      <p>
+        Different models are good at different work, and choosing between them
+        by feel does not scale past one person or one repository. I wanted the
+        choice to be a rule I could inspect, the execution to leave evidence I
+        could review, and the definition of "done" to stay with me rather than
+        with whichever model finished last.
+      </p>
+    </section>
+
+    <section class="case-block">
+      <h2>What it does</h2>
+      <table class="fact-table">
+        <tr><th>Cross-LLM division</th><td>Claude and GPT-series models, driven through their existing CLIs, take on planning, focused analysis, implementation, and independent review as separate roles.</td></tr>
+        <tr><th>Deterministic routing</th><td>The implementing model is chosen by explicit task type. General implementation and concurrency-sensitive work take different paths, so quality and cost considerations are rules rather than habits.</td></tr>
+        <tr><th>Reusable executor</th><td>Initialization, environment discovery, an isolated worktree bound to a specific commit, staged execution, and a run record for every task.</td></tr>
+        <tr><th>Acceptance state</th><td>A successful model exit still needs verification. Inputs, commits, and run evidence are saved; quality approval is never granted automatically.</td></tr>
+        <tr><th>Applied in practice</th><td>A JobSignal repair pilot and the LLM Interview Lab delivery. Routing and run checks were adjusted after real failures.</td></tr>
+      </table>
+    </section>
+
+    <section class="case-block">
+      <h2>The flow, and who does what</h2>
+      <ol class="flow" aria-label="Workflow stages">
+        <li>Task and acceptance criteria <span class="who">me</span></li>
+        <li>Planning and focused analysis <span class="who">coordinated</span></li>
+        <li>Choose the implementing model by task type <span class="who who--cli">CLI</span></li>
+        <li>Execute in an isolated workspace, save run evidence <span class="who who--cli">CLI</span></li>
+        <li>Tests and independent review <span class="who">coordinated</span></li>
+        <li>Fix, or adjust the task routing <span class="who">coordinated</span></li>
+        <li>Human acceptance and release <span class="who">me</span></li>
+      </ol>
+      <p class="flow-legend">CLI = implemented as a stage in the local executor · coordinated = driven by a main session with the CLI and human judgment · me = my decision</p>
+    </section>
+
+    <section class="case-block">
+      <h2>A real failure and what changed</h2>
+      <p>
+        On one task the implementation stage exited successfully, but the saved
+        run evidence did not cover the acceptance criteria. Nothing in the
+        process treated that exit as done: the task moved to
+        <em>awaiting verification</em>, the gap was identified in review, and
+        the work was redone. The routing rule and the run checks were tightened
+        afterwards so the same gap would be caught earlier. This is the
+        behavior the whole design exists for.
+      </p>
+    </section>
+
+    <section class="case-block">
+      <h2>My contribution</h2>
+      <ul class="dash-list">
+        <li>Defined the model responsibilities and the acceptance boundary between execution success and task completion.</li>
+        <li>Built the reusable executor: initialization, environment discovery, commit-bound isolated worktrees, staged execution, and run records.</li>
+        <li>Revised routing and run checks based on real failures rather than on a diagram.</li>
+        <li>Remained responsible for the final delivery on every task that went through it.</li>
+      </ul>
+    </section>
+
+    <section class="case-block">
+      <h2>Status and boundaries</h2>
+      <p class="status-row">
+        <span class="tag tag--preview">Local, installable CLI · version 0.1</span>
+        <span class="tag">Single-stage executor</span>
+        <span class="tag tag--pending">Automatic scheduling not implemented</span>
+      </p>
+      <p>
+        The CLI is a private preview package with a single-stage executor. The
+        full flow is coordinated by a main session; automatic scheduling,
+        persistent state, cross-process coordination, automatic review
+        admission, and hard budget limits are future scope. I do not claim a
+        measured cost reduction: the only figures I have are price scenarios
+        under identical token and caching assumptions, not a controlled
+        comparison.
+      </p>
+    </section>
+
+    <section class="case-block">
+      <h2>Related public work</h2>
+      <p>
+        <a class="inline-link" href="https://github.com/RussCTGL/agent-harness-pack" target="_blank" rel="noopener">agent-harness-pack</a>
+        is the public, earlier half of this work: role templates for
+        implementation and independent review, delivery rules, CI templates,
+        and lessons learned. It is a separate repository from the CLI and is not
+        the CLI's source code.
+      </p>
+    </section>
+
+  </article>
+
+  <nav class="case-foot" aria-label="More cases">
+    <a href="jobsignal.html">JobSignal →</a>
+    <a href="freshlens.html">FreshLens →</a>
+    <a href="../index.html#work">All work</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>© 2026 Yizhou (Russell) Lu · Statuses reflect evidence as of September 2026.</p>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

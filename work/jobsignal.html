@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobSignal — engineering case study · Yizhou (Russell) Lu</title>
+  <meta name="description" content="How JobSignal turns resume profiles into ranked, explained job matches, and how a recent ingestion repair coordinated concurrent writers and was verified with regression and mutation tests.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▲</text></svg>">
+</head>
+<body>
+
+  <a class="skip-link" href="#top">Skip to content</a>
+
+  <div class="band band--hero band--case">
+    <header class="site-header">
+      <a class="wordmark" href="../index.html">YL<span class="wordmark-dot">.</span></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
+      <a class="btn btn--primary btn--sm" href="mailto:0109yizhoulu@gmail.com">Email me</a>
+    </header>
+
+    <main id="top" tabindex="-1">
+      <div class="case-hero">
+        <a class="crumb" href="../index.html#work">← All work</a>
+        <p class="kicker kicker--band">Engineering case study · JobSignal</p>
+        <h1>Recovering interrupted ingestion without letting writers collide.</h1>
+        <p class="case-lede">
+          JobSignal is an AI application that turns a resume into ranked job
+          matches, each with a written explanation. This case covers one recent
+          engineering problem: what happens when a background ingestion run is
+          interrupted, and how to repair the leftover state safely when more than
+          one write path can touch the same rows.
+        </p>
+        <p class="status-row">
+          <span class="tag tag--live">Live product</span>
+          <span class="tag">Fix merged · CI passing</span>
+          <span class="tag tag--pending">Production acceptance pending</span>
+        </p>
+        <p class="link-row">
+          <a class="text-link" href="https://www.liuzijob.com/" target="_blank" rel="noopener">Live product ↗</a>
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <article class="case">
+
+    <section class="case-block">
+      <h2>What the product does</h2>
+      <p>
+        A candidate uploads a resume. Claude extracts a structured profile;
+        pgvector retrieves candidate listings, sourced from public Department of
+        Labor filings that indicate sponsorship history; an LLM reranker orders
+        the shortlist and writes a rationale for each match. The public homepage
+        is open; the matching flow itself needs an account and a resume.
+      </p>
+      <ol class="flow" aria-label="JobSignal pipeline">
+        <li>Ingest listings from source data <span class="who">this case</span></li>
+        <li>Normalize and chunk into child records <span class="who">this case</span></li>
+        <li>Vector retrieval against the candidate profile <span class="who">unchanged</span></li>
+        <li>LLM rerank <span class="who">unchanged</span></li>
+        <li>Written rationale per match <span class="who">unchanged</span></li>
+      </ol>
+      <p>
+        The application is built like production even though it is a solo
+        product: row-level security, prompt-injection hardening, per-user
+        quotas, model routing with prompt caching, and daily health checks.
+      </p>
+    </section>
+
+    <section class="case-block">
+      <h2>The problem</h2>
+      <p>
+        Job data has to be both usable and consistent. Ingestion runs in the
+        background and writes listings in batches of child chunks. When a run is
+        interrupted, it leaves records in an unfinished state. A repair job that
+        simply re-processes the leftovers introduces a second writer, and two
+        writers touching the same rows produce duplicates and partial writes
+        that are worse than the original interruption.
+      </p>
+    </section>
+
+    <section class="case-block">
+      <h2>My role</h2>
+      <p>
+        I own JobSignal end to end. For this change I defined the requirement
+        and the acceptance criteria, designed the guard, and reviewed the
+        implementation, which was produced with AI coding tools under the
+        <a class="inline-link" href="cross-llm-workflow.html">cross-LLM workflow</a>
+        I run. The design, review, and the call on what counted as done are mine;
+        this page does not claim every line was hand-written.
+      </p>
+    </section>
+
+    <section class="case-block">
+      <h2>Decisions</h2>
+      <ul class="dash-list">
+        <li><strong>One shared lease for every relevant write path.</strong> The regular ingestion path and the repair path both have to hold the same lease before writing, rather than each checking its own flag.</li>
+        <li><strong>Bounded work per run.</strong> A run is limited in both processing time and row count, so a repair can never turn into an unbounded rewrite.</li>
+        <li><strong>Stop writing after losing the lease.</strong> The lease is re-checked between batches, not only at the start; losing it halts subsequent writes.</li>
+        <li><strong>Keep the guard at the application layer and say so.</strong> This does not claim to solve every database-level concurrency issue; it makes the known failure mode bounded and observable.</li>
+      </ul>
+    </section>
+
+    <section class="case-block">
+      <h2>How it was verified</h2>
+      <ul class="dash-list">
+        <li><strong>A behavior test that fails on the old code.</strong> The regression test reproduces the interrupted-run scenario and fails against the previous implementation before passing with the lease in place.</li>
+        <li><strong>A mutation check.</strong> With the lease check removed, the repair job kept going and wrote three batches of child chunks. With the guard restored, only the first batch executed. That is the evidence that the guard, and not something incidental, is what stops the second writer.</li>
+      </ul>
+      <table class="fact-table">
+        <tr><th>Test snapshot</th><td>2026-09-14, candidate commit <code>45696f8</code>: 94 test files, 1,487 tests. Not re-run for this page and not a live production figure; Playwright end-to-end runs are counted separately.</td></tr>
+        <tr><th>CI</th><td>Passing on the merged change.</td></tr>
+      </table>
+    </section>
+
+    <section class="case-block">
+      <h2>Status and boundaries</h2>
+      <p class="status-row">
+        <span class="tag tag--merged">Code merged</span>
+        <span class="tag tag--merged">CI passing</span>
+        <span class="tag tag--pending">Production behavior acceptance pending</span>
+      </p>
+      <p>
+        The change is merged and CI is green. Acceptance of the behavior in
+        production, against real interrupted runs, has not been completed yet
+        and is tracked separately. The application-level lease is not presented
+        as a substitute for database-level coordination.
+      </p>
+    </section>
+
+    <section class="case-block">
+      <h2>Where to see the evidence</h2>
+      <ul class="dash-list">
+        <li>The <a class="inline-link" href="https://www.liuzijob.com/" target="_blank" rel="noopener">live product</a>, including the public demo data notes.</li>
+        <li>The pull request, comparison report, and test snapshot behind this case are in a private repository and can be walked through on request.</li>
+      </ul>
+    </section>
+
+  </article>
+
+  <nav class="case-foot" aria-label="More cases">
+    <a href="cross-llm-workflow.html">Next: Cross-LLM Development Workflow →</a>
+    <a href="freshlens.html">FreshLens →</a>
+    <a href="../index.html#work">All work</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>© 2026 Yizhou (Russell) Lu · Statuses reflect evidence as of September 2026.</p>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>
